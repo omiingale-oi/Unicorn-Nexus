@@ -5240,10 +5240,6 @@ img {
     padding: 80px 0;
   }
 
-  .hero {
-    padding: 110px 0 80px;
-  }
-
   .heroContent h1 {
     font-size: clamp(43px, 13vw, 65px);
   }
