@@ -85,12 +85,12 @@ img {
 
 .container {
   width: min(100% - 60px, var(--max-width));
-  margin-inline: auto;
+  margin-left: 30px;
 }
 
 .section-container {
   width: min(100% - 60px, var(--max-width));
-  margin-inline: auto;
+  margin-left: 30px;
 }
 
 
