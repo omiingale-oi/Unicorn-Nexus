@@ -1,0 +1,698 @@
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contactSection {
+  position: relative;
+  padding: 120px 0 60px;
+  background: #050505;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.sectionContainer {
+  width: min(1400px, calc(100% - 48px));
+  margin: 0 auto;
+  position: relative;
+}
+
+.contactGlow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(130px);
+  pointer-events: none;
+}
+
+.contactGlowOne {
+  top: 5%;
+  left: -250px;
+  background: rgba(245, 180, 35, 0.08);
+}
+
+.contactGlowTwo {
+  bottom: 0;
+  right: -250px;
+  background: rgba(245, 180, 35, 0.06);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contactHeader {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 60px;
+  margin-bottom: 65px;
+}
+
+.sectionLabel {
+  color: #f5b423;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.contactHeader h2 {
+  margin: 18px 0 0;
+  color: #ffffff;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.contactHeader h2 span {
+  color: #f5b423;
+}
+
+.contactHeader > p {
+  max-width: 480px;
+  margin: 0;
+
+  color: #999999;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.contactLayout {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 25px;
+}
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactInfoCard {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 25px;
+
+  min-height: 105px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.contactInfoCard:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(245, 180, 35, 0.45);
+
+  background: rgba(245, 180, 35, 0.035);
+}
+
+.contactInfoIcon {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(245, 180, 35, 0.35);
+
+  color: #f5b423;
+
+  font-size: 18px;
+}
+
+.contactInfoCard > div:nth-child(2) {
+  min-width: 0;
+}
+
+.contactInfoCard > div:nth-child(2) > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #f5b423;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+}
+
+.contactInfoCard h3 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+.contactInfoCard p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.contactClickable {
+  cursor: pointer;
+}
+
+.contactArrow {
+  position: absolute;
+
+  right: 20px;
+  top: 20px;
+
+  color: #f5b423;
+
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.contactClickable:hover .contactArrow {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================================
+   WHATSAPP CONTACT ICON
+========================================================= */
+
+.whatsappIcon {
+  color: #25d366;
+  border-color: rgba(37, 211, 102, 0.35);
+}
+
+.whatsappIcon svg {
+  display: block;
+}
+
+/* =========================================================
+   WORKING HOURS
+========================================================= */
+
+.contactHours {
+  margin-top: 8px;
+
+  padding: 25px;
+
+  border-top: 1px solid rgba(245, 180, 35, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contactHours > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #f5b423;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+}
+
+.contactHours strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.contactHours p {
+  margin: 5px 0 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.contactFormWrapper {
+  padding: 42px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(245, 180, 35, 0.06),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  border: 1px solid rgba(245, 180, 35, 0.18);
+
+  box-sizing: border-box;
+}
+
+.contactFormHeading > span {
+  color: #f5b423;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2em;
+}
+
+.contactFormHeading h3 {
+  margin: 15px 0 35px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+}
+
+.contactFormHeading em {
+  color: #f5b423;
+  font-style: normal;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.formRow {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.formGroup label {
+  color: #777777;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #555555;
+}
+
+.formGroup select {
+  color: #aaaaaa;
+
+  appearance: auto;
+}
+
+.formGroup select option {
+  background: #111111;
+  color: #ffffff;
+}
+
+.formGroup textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: rgba(245, 180, 35, 0.6);
+
+  background: rgba(245, 180, 35, 0.025);
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.contactSubmit {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 17px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #f5b423;
+
+  background: #f5b423;
+
+  color: #050505;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contactSubmit:hover {
+  background: transparent;
+
+  color: #f5b423;
+
+  transform: translateY(-2px);
+}
+
+.contactSubmit span {
+  font-size: 20px;
+}
+
+/* =========================================================
+   BOTTOM STRIP
+========================================================= */
+
+.contactBottom {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 70px;
+  padding-top: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contactBottom > span {
+  color: #f5b423;
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
+}
+
+.contactBottom p {
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 11px;
+
+  text-align: right;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .contactLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .contactHeader {
+    display: block;
+  }
+
+  .contactHeader > p {
+    margin-top: 25px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 80px 0 40px;
+  }
+
+  .sectionContainer {
+    width: min(100% - 32px, 1400px);
+  }
+
+  .contactHeader {
+    margin-bottom: 45px;
+  }
+
+  .contactHeader h2 {
+    font-size: 43px;
+  }
+
+  .contactHeader > p {
+    font-size: 14px;
+  }
+
+  .contactInfoCard {
+    padding: 20px;
+  }
+
+  .contactInfoCard h3 {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+
+  .contactInfoCard p {
+    font-size: 11px;
+  }
+
+  .contactFormWrapper {
+    padding: 25px 20px;
+  }
+
+  .contactFormHeading h3 {
+    font-size: 25px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactBottom {
+    display: block;
+  }
+
+  .contactBottom p {
+    margin-top: 15px;
+    text-align: left;
+    line-height: 1.7;
+  }
+}
+/* =========================================================
+   APPEND THIS BLOCK TO THE BOTTOM OF services.module.css
+   Adds the scroll-reveal system + ambient motion the theme
+   was missing (hover-only transitions aren't enough on their own).
+========================================================= */
+
+/* Scroll-triggered reveal — used by the <Reveal> component */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ambient ctaGlow pulse (currently static — this makes it breathe) */
+.ctaGlow {
+  animation: goldPulse 4.5s ease-in-out infinite;
+}
+
+@keyframes goldPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.94);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 1;
+  }
+}
+
+/* Slow drifting background grid instead of a static one */
+.heroGrid,
+.ctaGrid {
+  animation: gridDrift 18s linear infinite;
+}
+
+@keyframes gridDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 80px;
+  }
+}
+
+/* Pulsing dot on the gold divider line before eyebrow text */
+.sectionEyebrow::before,
+.ctaEyebrow::before {
+  box-shadow: 0 0 0 rgba(212, 175, 55, 0.6);
+  animation: lineGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes lineGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+  }
+}
+
+/* Gentle pulse on the hero badge dot (was static) */
+.heroBadgeDot {
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.8);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 1);
+  }
+}
+
+/* Respect users who've asked for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .ctaGlow,
+  .heroGrid,
+  .ctaGrid,
+  .sectionEyebrow::before,
+  .ctaEyebrow::before,
+  .heroBadgeDot {
+    animation: none;
+  }
+}
+.successMessage {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: 8px;
+  background: rgba(34, 197, 94, 0.08);
+  color: #22c55e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.errorMessage {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contactSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

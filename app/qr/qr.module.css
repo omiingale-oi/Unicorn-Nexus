@@ -1,0 +1,610 @@
+.qrPage {
+  --gold: #d4af37;
+  --gold-light: #f1d675;
+  --black: #050505;
+  --black-soft: #0d0d0d;
+  --white: #ffffff;
+  --muted: #999999;
+  --border: rgba(255, 255, 255, 0.1);
+
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+}
+
+.container {
+  width: min(680px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 100px 0 80px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.heading {
+  margin: 0 0 14px;
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.heading span {
+  color: var(--gold);
+}
+
+.subtext {
+  margin: 0 0 40px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #cfcfcf;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  background: var(--black-soft);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 2px;
+  transition: border-color 0.25s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.submitButton {
+  margin-top: 8px;
+  min-height: 52px;
+  padding: 0 28px;
+  border: none;
+  background: var(--gold);
+  color: #080808;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: var(--gold-light);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #ff8080;
+  font-size: 13px;
+  margin: -6px 0 0;
+}
+
+.resultBox {
+  margin-top: 40px;
+  padding: 32px;
+  border: 1px solid var(--gold-border, rgba(212, 175, 55, 0.3));
+  background: var(--black-soft);
+  text-align: center;
+}
+
+.resultBox canvas {
+  width: 260px;
+  height: 260px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.resultActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.downloadButton,
+.viewButton {
+  min-height: 46px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--white);
+  transition: border-color 0.25s ease;
+}
+
+.downloadButton:hover,
+.viewButton:hover {
+  border-color: var(--gold);
+}
+
+/* =========================================================
+   MINI SITE (the page a scanned QR opens)
+========================================================= */
+
+.miniSite {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.miniCard {
+  width: min(420px, 100%);
+  padding: 40px 32px;
+  border: 1px solid var(--border);
+  background: var(--black-soft);
+  text-align: center;
+}
+
+.miniBadge {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 22px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.miniName {
+  margin: 0 0 6px;
+  font-size: 24px;
+}
+
+.miniDescription {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.miniDetails {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.miniDetailRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.miniDetailRow span:first-child {
+  color: var(--muted);
+}
+
+.miniDetailRow a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.miniDetailRow a:hover {
+  color: var(--gold);
+}
+
+.saveButton {
+  width: 100%;
+  min-height: 52px;
+  border: none;
+  background: var(--gold);
+  color: #080808;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  background: var(--gold-light);
+}
+
+.poweredBy {
+  margin-top: 24px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   APPEND TO THE BOTTOM OF qr.module.css
+   CTA block shown below the generator, driving traffic to /services.
+========================================================= */
+
+.cta {
+  position: relative;
+  margin-top: 60px;
+  padding: 60px 40px;
+  text-align: center;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12), transparent 60%),
+    var(--black-soft);
+  overflow: hidden;
+}
+
+.ctaGlow {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 50%;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaHeading {
+  margin: 14px 0 12px;
+  font-size: clamp(24px, 3.5vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+.ctaHeading span {
+  color: var(--gold);
+}
+
+.ctaText {
+  max-width: 420px;
+  margin: 0 auto 26px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 0 26px;
+  background: var(--gold);
+  color: #080808;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background: var(--gold-light);
+}
+/* =========================================================
+   APPEND TO THE BOTTOM OF qr.module.css
+   Fuller one-page mini-website styling.
+========================================================= */
+
+.miniSite {
+  padding: 0;
+  align-items: flex-start;
+}
+
+.miniWrapper {
+  width: min(480px, 100%);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--black-soft);
+}
+
+.miniCover {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: visible;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(212, 175, 55, 0.22),
+      transparent 55%
+    ),
+    #090909;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.miniCoverImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.miniAvatarWrap {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -55px;
+  margin-bottom: 18px;
+}
+
+.miniAvatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: #e3a51b;
+  border: 5px solid #090909;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 6;
+
+  color: #050505;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 55, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.miniAvatarImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.miniBody {
+  position: relative;
+  z-index: 2;
+  padding: 0 28px 30px;
+}
+
+.miniName2 {
+  margin: 14px 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.miniDescription2 {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.miniActions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.miniActionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: var(--black);
+  border: 1px solid var(--border);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.miniActionBtn:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.miniActionIcon {
+  font-size: 20px;
+}
+
+.miniDetailsCard {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+  text-align: left;
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.miniSocialRow {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.miniSocialBtn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.miniSocialBtn:hover {
+  border-color: var(--gold);
+}
+/* =========================================================
+   Cover photo, logo image, and gallery grid.
+========================================================= */
+.miniGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.miniGalleryImg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.uploadField {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 4px;
+  background: var(--black-soft);
+}
+
+.uploadPreviewRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.uploadPreviewImg {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+/* =========================================================
+   APPEND TO THE BOTTOM OF qr.module.css — skip if already added
+========================================================= */
+
+.expiredActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.expiredPrimaryButton,
+.expiredSecondaryButton {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.expiredPrimaryButton {
+  background: var(--gold);
+  color: #080808;
+}
+
+.expiredPrimaryButton:hover {
+  transform: translateY(-2px);
+  background: var(--gold-light);
+}
+
+.expiredSecondaryButton {
+  border: 1px solid var(--border);
+  color: var(--white);
+  background: transparent;
+}
+
+.expiredSecondaryButton:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
