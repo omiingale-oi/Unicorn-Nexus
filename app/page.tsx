@@ -879,7 +879,7 @@ export default function Home() {
                   <div className="testimonial-avatar">UK</div>
 
                   <div>
-                    <strong>Uro Kids School</strong>
+                    <strong>Euro Kids School</strong>
                     <span>Education</span>
                   </div>
                 </div>
