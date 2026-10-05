@@ -608,3 +608,44 @@
   transform: translateY(-2px);
   border-color: var(--gold);
 }
+/* =========================================================
+   QR CODE — ALWAYS KEEP PERFECT SQUARE
+   Prevents QR image/canvas from stretching on mobile
+   ========================================================= */
+
+.resultBox canvas,
+.resultBox img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
+  margin: 0 auto 20px !important;
+}
+
+/* QR wrapper, if present */
+.resultBox,
+.qrContainer,
+.qrCode,
+.qrImage {
+  box-sizing: border-box;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .resultBox {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px !important;
+  }
+
+  .resultBox canvas,
+  .resultBox img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
+  }
+}
