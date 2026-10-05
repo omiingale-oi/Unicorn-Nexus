@@ -198,12 +198,19 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/knowledge-hub"
+            className="mobile-nav-link"
+            onClick={closeMobile}
+          >
+            Knowledge Hub
+          </Link>
+
+          <Link
             href="/qr-generator"
             className="mobile-nav-link"
             onClick={closeMobile}
           >
-
-            Knowledge Hub
+            QR Generator
           </Link>
 
           <Link
@@ -211,16 +218,6 @@ export default function Header() {
             className="mobile-nav-link"
             onClick={closeMobile}
           >
-
-            QR Generator
-          </Link>
-
-          <Link
-            href="/knowledge-hub"
-            className="mobile-nav-link"
-            onClick={closeMobile}
-          >
-
             Contact
           </Link>
 
