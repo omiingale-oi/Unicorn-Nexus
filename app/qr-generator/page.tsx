@@ -485,9 +485,7 @@ export default function QrGeneratorPage() {
         if (updateError) {
           console.error(updateError);
 
-          setError(
-            `Unable to update your QR code: ${updateError.message}`
-          );
+          setError(updateError.message);
 
           setLoading(false);
           return;
