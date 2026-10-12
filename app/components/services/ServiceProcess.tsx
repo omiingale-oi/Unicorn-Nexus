@@ -7,16 +7,20 @@ interface ServiceProcessStep {
   description: string;
 }
 
+
 interface ServiceProcessProps {
   heading: string;
   description: string;
   steps: ServiceProcessStep[];
+  flowStyle?: boolean;
 }
+
 
 export default function ServiceProcess({
   heading,
   description,
   steps,
+  flowStyle = false,
 }: ServiceProcessProps) {
   return (
     <section className={styles.processSection}>
