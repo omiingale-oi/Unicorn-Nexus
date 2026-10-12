@@ -265,7 +265,7 @@ export const services: ServiceData[] = [
       heading: "Why Businesses Add a 360° Virtual Tour",
       description:
         "An immersive tour does more than look impressive — it reduces hesitation and gets more of the right customers through your door.",
-      image: "/services/google-virtual-tour-360/google-virtual-tour-360-local-seo-india.jpg",
+      image: "/services/google-virtual-tour-360/google-virtual-tour-360-local-seo-india.png",
       imageAlt: "Business owner reviewing increased Google Maps views after publishing a 360 virtual tour",
       items: [
         { title: "Higher Listing Engagement", description: "Interactive tours hold attention longer than static photos and encourage more clicks on your listing." },
