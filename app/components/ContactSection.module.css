@@ -5,9 +5,9 @@
 .contactSection {
   position: relative;
   padding: 120px 0 60px;
-  background: #050505;
+  background: #120b08;
   overflow: hidden;
-  color: #ffffff;
+  color: #f7efe9;
 }
 
 .sectionContainer {
@@ -28,13 +28,13 @@
 .contactGlowOne {
   top: 5%;
   left: -250px;
-  background: rgba(245, 180, 35, 0.08);
+  background: rgba(138, 90, 61, 0.12);
 }
 
 .contactGlowTwo {
   bottom: 0;
   right: -250px;
-  background: rgba(245, 180, 35, 0.06);
+  background: rgba(138, 90, 61, 0.08);
 }
 
 /* =========================================================
@@ -54,7 +54,7 @@
 }
 
 .sectionLabel {
-  color: #f5b423;
+  color: #c98d68;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -62,14 +62,14 @@
 
 .contactHeader h2 {
   margin: 18px 0 0;
-  color: #ffffff;
+  color: #f7efe9;
   font-size: clamp(42px, 6vw, 76px);
   line-height: 0.98;
   letter-spacing: -0.045em;
 }
 
 .contactHeader h2 span {
-  color: #f5b423;
+  color: #c98d68;
 }
 
 .contactHeader > p {
@@ -136,9 +136,9 @@
 .contactInfoCard:hover {
   transform: translateX(5px);
 
-  border-color: rgba(245, 180, 35, 0.45);
+  border-color: rgba(201, 141, 104, 0.45);
 
-  background: rgba(245, 180, 35, 0.035);
+  background: rgba(201, 141, 104, 0.04);
 }
 
 .contactInfoIcon {
@@ -151,9 +151,9 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(245, 180, 35, 0.35);
+  border: 1px solid rgba(201, 141, 104, 0.35);
 
-  color: #f5b423;
+  color: #c98d68;
 
   font-size: 18px;
 }
@@ -167,7 +167,7 @@
 
   margin-bottom: 6px;
 
-  color: #f5b423;
+  color: #c98d68;
 
   font-size: 9px;
 
@@ -177,7 +177,7 @@
 .contactInfoCard h3 {
   margin: 0 0 5px;
 
-  color: #ffffff;
+  color: #f7efe9;
 
   font-size: 16px;
 
@@ -206,7 +206,7 @@
   right: 20px;
   top: 20px;
 
-  color: #f5b423;
+  color: #c98d68;
 
   font-size: 16px;
 
@@ -239,7 +239,7 @@
 
   padding: 25px;
 
-  border-top: 1px solid rgba(245, 180, 35, 0.3);
+  border-top: 1px solid rgba(184, 117, 76, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -248,7 +248,7 @@
 
   margin-bottom: 10px;
 
-  color: #f5b423;
+  color: #c98d68;
 
   font-size: 9px;
 
@@ -281,17 +281,17 @@
   background:
     linear-gradient(
       145deg,
-      rgba(245, 180, 35, 0.06),
+      rgba(184, 117, 76, 0.06),
       rgba(255, 255, 255, 0.015)
     );
 
-  border: 1px solid rgba(245, 180, 35, 0.18);
+  border: 1px solid rgba(184, 117, 76, 0.18);
 
   box-sizing: border-box;
 }
 
 .contactFormHeading > span {
-  color: #f5b423;
+  color: #c98d68;
 
   font-size: 9px;
 
@@ -309,7 +309,7 @@
 }
 
 .contactFormHeading em {
-  color: #f5b423;
+  color: #c98d68;
   font-style: normal;
 }
 
@@ -400,9 +400,9 @@
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
-  border-color: rgba(245, 180, 35, 0.6);
+  border-color: rgba(184, 117, 76, 0.6);
 
-  background: rgba(245, 180, 35, 0.025);
+  background: rgba(184, 117, 76, 0.025);
 }
 
 /* =========================================================
@@ -420,11 +420,11 @@
   align-items: center;
   justify-content: space-between;
 
-  border: 1px solid #f5b423;
+  border: 1px solid #c98d68;
 
-  background: #f5b423;
+  background: #c98d68;
 
-  color: #050505;
+  color: #120b08;
 
   font-family: inherit;
 
@@ -445,7 +445,7 @@
 .contactSubmit:hover {
   background: transparent;
 
-  color: #f5b423;
+  color: #c98d68;
 
   transform: translateY(-2px);
 }
@@ -474,7 +474,7 @@
 }
 
 .contactBottom > span {
-  color: #f5b423;
+  color: #c98d68;
 
   font-size: 10px;
 
@@ -622,17 +622,17 @@
 /* Pulsing dot on the gold divider line before eyebrow text */
 .sectionEyebrow::before,
 .ctaEyebrow::before {
-  box-shadow: 0 0 0 rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 0 rgba(138, 90, 61, 0.6);
   animation: lineGlow 2.4s ease-in-out infinite;
 }
 
 @keyframes lineGlow {
   0%,
   100% {
-    box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+    box-shadow: 0 0 0 rgba(138, 90, 61, 0);
   }
   50% {
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+    box-shadow: 0 0 10px rgba(138, 90, 61, 0.7);
   }
 }
 
@@ -645,11 +645,11 @@
   0%,
   100% {
     opacity: 0.6;
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.8);
+    box-shadow: 0 0 12px rgba(138, 90, 61, 0.8);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 1);
+    box-shadow: 0 0 20px rgba(138, 90, 61, 1);
   }
 }
 

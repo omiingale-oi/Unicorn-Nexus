@@ -1,6 +1,6 @@
 .page {
   min-height: 100vh;
-  background: #050505;
+  background: #120b08;
   color: #ffffff;
 }
 
@@ -36,7 +36,7 @@
       rgba(0, 109, 119, 0.12),
       transparent 30%
     ),
-    #050505;
+    #120b08;
 }
 
 .glowOne,
@@ -334,15 +334,15 @@
   justify-content: center;
   align-items: center;
 
-  border: 1px dashed rgba(216, 169, 39, 0.2);
+  border: 1px dashed rgba(118, 80, 32, 0.45);
 
-  background: #090909;
+  background: #ffffff;
 
   text-align: center;
 }
 
 .emptyGallery span {
-  color: #d8a927;
+  color: #493a30;
 
   font-size: 11px;
   font-weight: 700;
@@ -352,7 +352,7 @@
 .emptyGallery p {
   margin: 12px 0 0;
 
-  color: #555555;
+  color: #62564e;
   font-size: 13px;
 }
 

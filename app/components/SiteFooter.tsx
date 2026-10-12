@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,10 +8,12 @@ export default function Footer() {
 
         {/* BRAND */}
         <div className="footer-brand">
-          <img
+          <Image
             src="/logo.png"
             alt="Unicorn Nexus 360"
             className="footer-logo"
+            width={210}
+            height={83}
           />
 
           <p>
@@ -37,24 +40,36 @@ export default function Footer() {
         <div className="footer-column">
           <h4>SERVICES</h4>
 
-          <Link href="/services/google-map-services">
-            Google Map Services
+          <Link href="/services/google-business-profile-management">
+            GMB
           </Link>
 
-          <Link href="/services/digital-marketing">
-            Digital Marketing
+          <Link href="/services/google-virtual-tour-360">
+            Google Virtual Tour 360
+          </Link>
+
+          <Link href="/services/google-map-services">
+            Google Map Services
           </Link>
 
           <Link href="/services/ai-marketing">
             AI Marketing
           </Link>
 
-          <Link href="/services/website-development">
-            Website Development
+          <Link href="/services/digital-marketing">
+            Digital Marketing
           </Link>
 
           <Link href="/services/social-media-management">
             Social Media Management
+          </Link>
+
+          <Link href="/services/website-development">
+            Website Development
+          </Link>
+
+          <Link href="/services/real-estate-marketing">
+            Real Estate Marketing
           </Link>
         </div>
 

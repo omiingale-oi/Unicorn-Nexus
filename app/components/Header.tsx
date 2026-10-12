@@ -6,12 +6,16 @@ import Link from "next/link";
 
 const services = [
   {
-    name: "Google Map Services",
-    href: "/services/google-map-services",
+    name: "GMB",
+    href: "/services/google-business-profile-management",
   },
   {
-    name: "Google Business Profile Management",
-    href: "/services/google-business-profile-management",
+    name: "Google Virtual Tour 360",
+    href: "/services/google-virtual-tour-360",
+  },
+  {
+    name: "Google Map Services",
+    href: "/services/google-map-services",
   },
   {
     name: "AI Marketing",

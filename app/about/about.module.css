@@ -1,26 +1,26 @@
 
 /* =========================================================
    UNICORN NEXUS — ABOUT PAGE
-   Premium Black + Gold Theme
+   Premium Dark Brown Theme
 ========================================================= */
 
 .page {
-  --accent: #d9a62e;
-  --accent-light: #f5c95b;
-  --accent-dark: #a87916;
+  --accent: #b8754c;
+  --accent-light: #ddb08c;
+  --accent-dark: #6a3d2a;
 
-  --bg: #050505;
-  --bg-soft: #0a0a0a;
+  --bg: #120b08;
+  --bg-soft: #1b120d;
 
   --card: rgba(255, 255, 255, 0.035);
-  --card-hover: rgba(217, 166, 46, 0.045);
+  --card-hover: rgba(184, 117, 76, 0.055);
 
-  --border: rgba(217, 166, 46, 0.14);
-  --border-strong: rgba(217, 166, 46, 0.35);
+  --border: rgba(184, 117, 76, 0.18);
+  --border-strong: rgba(184, 117, 76, 0.38);
 
-  --text: #ffffff;
-  --text-soft: #d8d8d8;
-  --muted: #9a9a9a;
+  --text: #fff7f1;
+  --text-soft: #e4d4c9;
+  --muted: #b99680;
 
   background: var(--bg);
   color: var(--text);
@@ -47,7 +47,7 @@
 }
 
 .darkSection {
-  background: #030303;
+  background: #170d09;
 }
 
 .sectionGrid {
@@ -58,12 +58,12 @@
 
   background-image:
     linear-gradient(
-      rgba(217, 166, 46, 0.035) 1px,
+      rgba(184, 117, 76, 0.05) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(217, 166, 46, 0.035) 1px,
+      rgba(184, 117, 76, 0.05) 1px,
       transparent 1px
     );
 
@@ -106,8 +106,8 @@
   background: var(--accent);
 
   box-shadow:
-    0 0 8px rgba(217, 166, 46, 0.7),
-    0 0 18px rgba(217, 166, 46, 0.4);
+    0 0 8px rgba(184, 117, 76, 0.7),
+    0 0 18px rgba(184, 117, 76, 0.4);
 
   animation: pulse 2s ease-in-out infinite;
 }
@@ -206,10 +206,10 @@
   background:
     radial-gradient(
       circle at 75% 45%,
-      rgba(217, 166, 46, 0.11),
+      rgba(184, 117, 76, 0.14),
       transparent 32%
     ),
-    #050505;
+    #120b08;
 
   overflow: hidden;
 }
@@ -220,12 +220,12 @@
 
   background-image:
     linear-gradient(
-      rgba(217, 166, 46, 0.035) 1px,
+      rgba(184, 117, 76, 0.06) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(217, 166, 46, 0.035) 1px,
+      rgba(184, 117, 76, 0.06) 1px,
       transparent 1px
     );
 
@@ -361,20 +361,20 @@
 
   align-items: center;
 
-  border: 1px solid rgba(217, 166, 46, 0.5);
+  border: 1px solid rgba(184, 117, 76, 0.5);
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(217, 166, 46, 0.13),
-      rgba(5, 5, 5, 0.96) 68%
+      rgba(184, 117, 76, 0.13),
+      rgba(18, 11, 8, 0.96) 68%
     );
 
   box-shadow:
-    0 0 60px rgba(217, 166, 46, 0.12),
-    inset 0 0 40px rgba(217, 166, 46, 0.06);
+    0 0 60px rgba(184, 117, 76, 0.12),
+    inset 0 0 40px rgba(184, 117, 76, 0.06);
 
   z-index: 3;
 
@@ -410,7 +410,7 @@
 .orbit {
   position: absolute;
 
-  border: 1px solid rgba(217, 166, 46, 0.22);
+  border: 1px solid rgba(184, 117, 76, 0.22);
 
   border-radius: 50%;
 
@@ -451,8 +451,8 @@
   background: var(--accent);
 
   box-shadow:
-    0 0 10px rgba(217, 166, 46, 0.9),
-    0 0 22px rgba(217, 166, 46, 0.45);
+    0 0 10px rgba(184, 117, 76, 0.9),
+    0 0 22px rgba(184, 117, 76, 0.45);
 }
 
 .pointOne {
@@ -763,7 +763,7 @@
 
   margin-bottom: 30px;
 
-  border: 1px solid rgba(217, 166, 46, 0.4);
+  border: 1px solid rgba(184, 117, 76, 0.4);
 
   border-radius: 50%;
 
@@ -810,7 +810,7 @@
   width: 60px;
   height: 1px;
 
-  background: rgba(217, 166, 46, 0.3);
+  background: rgba(184, 117, 76, 0.3);
 }
 
 
@@ -1131,7 +1131,7 @@
 .testimonialCard:hover {
   border-color: var(--border-strong);
 
-  background: rgba(217, 166, 46, 0.04);
+  background: rgba(184, 117, 76, 0.04);
 }
 
 .stars {
@@ -1178,7 +1178,7 @@
 
   place-items: center;
 
-  border: 1px solid rgba(217, 166, 46, 0.35);
+  border: 1px solid rgba(184, 117, 76, 0.35);
 
   border-radius: 50%;
 
@@ -1236,10 +1236,10 @@
   background:
     radial-gradient(
       circle at 50% 40%,
-      rgba(217, 166, 46, 0.13),
+      rgba(184, 117, 76, 0.13),
       transparent 42%
     ),
-    #050505;
+    #120b08;
 
   text-align: center;
 }
@@ -1255,13 +1255,13 @@
 
   transform: translate(-50%, -50%);
 
-  border: 1px solid rgba(217, 166, 46, 0.08);
+  border: 1px solid rgba(184, 117, 76, 0.08);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 100px rgba(217, 166, 46, 0.08),
-    inset 0 0 100px rgba(217, 166, 46, 0.04);
+    0 0 100px rgba(184, 117, 76, 0.08),
+    inset 0 0 100px rgba(184, 117, 76, 0.04);
 
   animation: ctaPulse 5s ease-in-out infinite;
 }
@@ -1335,7 +1335,7 @@
 .primaryButton {
   background: var(--accent);
 
-  color: #050505;
+  color: #120b08;
 }
 
 .primaryButton:hover {

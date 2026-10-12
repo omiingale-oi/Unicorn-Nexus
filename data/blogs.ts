@@ -34,7 +34,7 @@ export const blogs: Blog[] = [
 
       "Google Maps visibility works best when it is part of a wider digital strategy. Your website, Google Business Profile, social media and other digital channels should support each other.",
 
-      "At Unicorn Nexus 360, we help businesses strengthen their digital visibility through Google Map Services, Google Business Profile Management, digital marketing, websites, social media and AI-powered solutions.",
+      "At Unicorn Nexus 360, we help businesses strengthen their digital visibility through Google Map Services, GMB, digital marketing, websites, social media and AI-powered solutions.",
 
       "If you want to improve how customers discover your business online, building a stronger Google Maps presence can be an important first step.",
     ],
@@ -65,7 +65,7 @@ export const blogs: Blog[] = [
 
       "Another advantage of digital marketing is that businesses can measure performance. Website visits, enquiries, engagement and other important metrics can help identify what is working and where improvements are needed.",
 
-      "At Unicorn Nexus 360, we help businesses build stronger digital visibility through Digital Marketing, Google Map Services, Google Business Profile Management, Website Development, Social Media Management and AI-powered solutions.",
+      "At Unicorn Nexus 360, we help businesses build stronger digital visibility through Digital Marketing, Google Map Services, GMB, Website Development, Social Media Management and AI-powered solutions.",
 
       "If your business wants to reach more customers and build a stronger online presence, a well-planned digital marketing strategy can be an important step towards sustainable growth.",
     ],

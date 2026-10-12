@@ -3,7 +3,6 @@ import styles from "./services.module.css";
 import Reveal from "./Reveal";
 
 interface ServiceBenefitItem {
-  icon: string;
   title: string;
   description: string;
 }
@@ -42,7 +41,6 @@ export default function ServiceBenefits({
             {items.map((item, index) => (
               <Reveal delay={index * 80} key={`${item.title}-${index}`}>
                 <article className={styles.benefitCard}>
-                  <div className={styles.benefitIcon}>{item.icon}</div>
                   <h3 className={styles.benefitCardTitle}>{item.title}</h3>
                   <p className={styles.benefitCardDesc}>{item.description}</p>
                 </article>

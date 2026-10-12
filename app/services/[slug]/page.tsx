@@ -188,6 +188,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         heading={service.process.heading}
         description={service.process.description}
         steps={service.process.steps}
+        flowStyle={service.slug === "google-map-services"}
       />
 
       <section className={styles.audienceSection}>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/data/services";
 import styles from "@/app/components/services/services.module.css";
@@ -6,7 +7,7 @@ import styles from "@/app/components/services/services.module.css";
 export const metadata: Metadata = {
   title: "Our Services | Unicorn Nexus 360",
   description:
-    "Google Maps, Google Business Profile, digital marketing, AI marketing, website development, social media and real estate marketing services across India.",
+    "Google Maps, 360° virtual tours, Google Business Profile, digital marketing, AI marketing, website development, social media and real estate marketing services across India.",
   alternates: {
     canonical: "https://www.unicornnexus360.com/services",
   },
@@ -40,7 +41,7 @@ export default function ServicesListPage() {
 
             <p className={styles.heroDescription}>
               From getting found on Google Maps to running smarter,
-              AI-supported campaigns — explore the seven services we use to
+              AI-supported campaigns — explore the eight services we use to
               build a stronger, more visible business for you.
             </p>
 
@@ -74,22 +75,34 @@ export default function ServicesListPage() {
                 className={styles.featureCard}
                 key={service.slug}
               >
-                <div className={styles.featureTop}>
-                  <span className={styles.featureIndex}>
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                <div className={styles.featureCardArtwork} aria-hidden="true">
+                  <Image
+                    src={service.overview.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    className={styles.featureCardImage}
+                  />
                 </div>
 
-                <h3 className={styles.featureCardTitle}>
-                  {service.navTitle}
-                </h3>
+                <div className={styles.featureCardBody}>
+                  <div className={styles.featureTop}>
+                    <span className={styles.featureIndex}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
 
-                <p className={styles.featureCardDesc}>
-                  {service.hero.tagline}
-                </p>
+                  <h3 className={styles.featureCardTitle}>
+                    {service.navTitle}
+                  </h3>
 
-                <div className={styles.cardArrow}>
-                  ↗
+                  <p className={styles.featureCardDesc}>
+                    {service.hero.tagline}
+                  </p>
+
+                  <div className={styles.cardArrow}>
+                    ↗
+                  </div>
                 </div>
               </Link>
             ))}

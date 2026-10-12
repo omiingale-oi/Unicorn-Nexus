@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactSection from "./components/ContactSection";
 const trustPoints = [
   "Google Map Services",
+  "Google Virtual Tour 360",
   "AI Marketing",
   "Digital Marketing",
   "Google My Business Profile Management",
@@ -14,60 +15,75 @@ const trustPoints = [
 const services = [
   {
     number: "01",
+    title: "GMB",
+    description:
+      "Professional management of your Google Business Profile to strengthen local presence and customer trust.",
+    href: "/services/google-business-profile-management",
+    image: "/services/google-business-profile/gbpm.png",
+  },
+  {
+    number: "02",
+    title: "Google Virtual Tour 360",
+    description:
+      "Help customers explore your business space with an immersive 360° virtual tour before they visit.",
+    href: "/services/google-virtual-tour-360",
+    image: "/services/google-virtual-tour-360/google-virtual-tour-360-services-india.jpg",
+  },
+  {
+    number: "03",
     title: "Google Map Services",
     description:
       "Build stronger local visibility and help your business get discovered when customers search on Google Maps.",
     href: "/services/google-map-services",
+    image: "/services/google-maps/google-maps-services-india.png",
     featured: true,
   },
   {
-    number: "02",
-    title: "Digital Marketing",
-    description:
-      "Strategic digital marketing solutions designed to increase visibility, reach the right audience and generate opportunities.",
-    href: "/services/digital-marketing",
-  },
-  {
-    number: "03",
-    title: "Social Media Management",
-    description:
-      "Create a consistent social presence with engaging content, strategic planning and professional account management.",
-    href: "/services/social-media-management",
-  },
-  {
     number: "04",
-    title: "Website Development",
-    description:
-      "Modern, responsive websites designed to represent your business professionally and convert visitors into customers.",
-    href: "/services/website-development",
-  },
-  {
-    number: "05",
     title: "AI Marketing",
     description:
       "Use AI-powered strategies and digital tools to improve marketing efficiency, visibility and customer engagement.",
     href: "/services/ai-marketing",
+    image: "/services/ai-marketing/ai-marketing.png",
+  },
+  {
+    number: "05",
+    title: "Digital Marketing",
+    description:
+      "Strategic digital marketing solutions designed to increase visibility, reach the right audience and generate opportunities.",
+    href: "/services/digital-marketing",
+    image: "/services/digital-marketing/digital-marketing.png",
   },
   {
     number: "06",
-    title: "Google Business Profile Management",
+    title: "Social Media Management",
     description:
-      "Professional management of your Google Business Profile to strengthen local presence and customer trust.",
-    href: "/services/google-business-profile-management",
+      "Create a consistent social presence with engaging content, strategic planning and professional account management.",
+    href: "/services/social-media-management",
+    image: "/services/social-media-management/social-media-management.png",
   },
   {
     number: "07",
+    title: "Website Development",
+    description:
+      "Modern, responsive websites designed to represent your business professionally and convert visitors into customers.",
+    href: "/services/website-development",
+    image: "/services/website-development/website-development.png",
+  },
+  {
+    number: "08",
     title: "Real Estate Marketing",
     description:
       "Digital marketing strategies built specifically to help real estate businesses reach buyers, investors and enquiries.",
     href: "/services/real-estate-marketing",
+    image: "/services/real-estate-marketing/real-estate.png",
   },
 ];
 const clients = [
   {
     name: "PCMC Mayor Office",
     category: "Government",
-    logo: "/clients/pcmc-mayor-office.jpeg",
+    logo: "/clients/PCMC Mayor Office.jpeg",
     
   },
   {
@@ -303,23 +319,29 @@ export default function Home() {
                   service.featured ? "service-featured" : ""
                 }`}
               >
-                <div className="service-top">
-                  <span>{service.number}</span>
-
-                  <span className="service-arrow">↗</span>
+                <div className="service-card-image">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
 
-                <div className="service-icon">
-                  {service.featured ? "⌖" : "✦"}
-                </div>
+                <div className="service-card-content">
+                  <div className="service-top">
+                    <span>{service.number}</span>
+                    <span className="service-arrow">↗</span>
+                  </div>
 
-                <h3>{service.title}</h3>
+                  <h3>{service.title}</h3>
 
-                <p>{service.description}</p>
+                  <p>{service.description}</p>
 
-                <div className="learn-more">
-                  Explore Service
-                  <span>→</span>
+                  <div className="learn-more">
+                    Explore Service
+                    <span>→</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -364,6 +386,15 @@ export default function Home() {
             {/* MAIN FEATURE */}
 
             <div className="why-feature">
+              <Image
+                src="/industries/built-around-business.png"
+                alt=""
+                fill
+                sizes="(max-width: 1000px) 100vw, 45vw"
+                className="why-feature-image"
+              />
+              <div className="why-feature-overlay" aria-hidden="true" />
+
               <div className="feature-number">01</div>
 
               <div className="feature-icon">✦</div>
@@ -396,66 +427,98 @@ export default function Home() {
             <div className="why-cards">
               <div className="why-card">
                 <div className="why-card-top">
-                  <span className="why-icon">⌖</span>
+                  <span className="why-card-image">
+                    <Image
+                      src="/services/google-maps/google-maps-services-india.png"
+                      alt="Google Maps business visibility"
+                      fill
+                      sizes="(max-width: 700px) 100vw, 25vw"
+                    />
+                  </span>
                   <span className="why-number">02</span>
                 </div>
 
-                <h3>Google Visibility</h3>
+                <div className="why-card-content">
+                  <h3>Google Visibility</h3>
 
-                <p>
-                  Strengthen your presence across Google Maps and Google Business
-                  Profile so customers can discover your business more easily.
-                </p>
+                  <p>
+                    Strengthen your presence across Google Maps and Google Business
+                    Profile so customers can discover your business more easily.
+                  </p>
+                </div>
 
-                <span className="card-arrow">↗</span>
               </div>
 
               <div className="why-card">
                 <div className="why-card-top">
-                  <span className="why-icon">AI</span>
+                  <span className="why-card-image">
+                    <Image
+                      src="/services/ai-marketing/ai-marketing.png"
+                      alt="AI-powered marketing"
+                      fill
+                      sizes="(max-width: 700px) 100vw, 25vw"
+                    />
+                  </span>
                   <span className="why-number">03</span>
                 </div>
 
-                <h3>AI-Powered Thinking</h3>
+                <div className="why-card-content">
+                  <h3>AI-Powered Thinking</h3>
 
-                <p>
-                  Use modern AI-driven strategies and digital technologies to make
-                  your marketing smarter, faster and more effective.
-                </p>
+                  <p>
+                    Use modern AI-driven strategies and digital technologies to make
+                    your marketing smarter, faster and more effective.
+                  </p>
+                </div>
 
-                <span className="card-arrow">↗</span>
               </div>
 
               <div className="why-card">
                 <div className="why-card-top">
-                  <span className="why-icon">360°</span>
+                  <span className="why-card-image">
+                    <Image
+                      src="/services/digital-marketing/digital-marketing.png"
+                      alt="Connected digital marketing solutions"
+                      fill
+                      sizes="(max-width: 700px) 100vw, 25vw"
+                    />
+                  </span>
                   <span className="why-number">04</span>
                 </div>
 
-                <h3>Complete Digital Solutions</h3>
+                <div className="why-card-content">
+                  <h3>Complete Digital Solutions</h3>
 
-                <p>
-                  From websites and social media to digital marketing and local
-                  visibility, we bring your important digital services together.
-                </p>
+                  <p>
+                    From websites and social media to digital marketing and local
+                    visibility, we bring your important digital services together.
+                  </p>
+                </div>
 
-                <span className="card-arrow">↗</span>
               </div>
 
               <div className="why-card">
                 <div className="why-card-top">
-                  <span className="why-icon">IN</span>
+                  <span className="why-card-image">
+                    <Image
+                      src="/industries/pan-india-reach.jpeg"
+                      alt="India-wide reach"
+                      fill
+                      sizes="(max-width: 700px) 100vw, 25vw"
+                    />
+                  </span>
                   <span className="why-number">05</span>
                 </div>
 
-                <h3>Pan-India Reach</h3>
+                <div className="why-card-content">
+                  <h3>Pan-India Reach</h3>
 
-                <p>
-                  Our digital solutions are designed to help businesses build
-                  visibility and connect with customers across India.
-                </p>
+                  <p>
+                    Our digital solutions are designed to help businesses build
+                    visibility and connect with customers across India.
+                  </p>
+                </div>
 
-                <span className="card-arrow">↗</span>
               </div>
             </div>
           </div>
@@ -471,7 +534,7 @@ export default function Home() {
       <div className="why-divider" />
 
       <div className="why-trust-item">
-        <strong>7+</strong>
+        <strong>8+</strong>
         <span>Digital Services</span>
       </div>
 
@@ -776,17 +839,16 @@ export default function Home() {
     <div className="clients-grid">
 
       {clients.map((client) => (
-        <a
-          
-          target="_blank"
-          rel="noopener noreferrer"
+        <article
           className="client-card"
           key={client.name}
         >
           <div className="client-logo">
-            <img
+            <Image
               src={client.logo}
-              alt={`${client.name} logo`}
+              alt={client.name}
+              width={150}
+              height={80}
             />
           </div>
 
@@ -794,9 +856,7 @@ export default function Home() {
             <h3>{client.name}</h3>
             <span>{client.category}</span>
           </div>
-
-          <span className="client-arrow">↗</span>
-        </a>
+        </article>
       ))}
 
     </div>
@@ -849,7 +909,9 @@ export default function Home() {
 
               {/* REVIEW 1 */}
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “Unicorn Nexus helped us improve our online visibility and
@@ -857,7 +919,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">PC</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/PCMC Mayor Office.jpeg"
+                      alt="PCMC Mayor Office"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>PCMC Mayor Office</strong>
@@ -868,7 +937,9 @@ export default function Home() {
 
               {/* REVIEW 2 */}
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “The team understood our requirements and helped us create
@@ -876,7 +947,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">UK</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/uro-kids-school.png"
+                      alt="Euro Kids School"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>Euro Kids School</strong>
@@ -887,7 +965,9 @@ export default function Home() {
 
               {/* REVIEW 3 */}
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “Professional service, clear communication and a strong
@@ -895,7 +975,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">SE</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/sarthak-english-medium-school.jpg"
+                      alt="Sarthak English Medium School"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>Sarthak English Medium School</strong>
@@ -906,7 +993,9 @@ export default function Home() {
 
               {/* REVIEW 4 */}
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “Our digital presence looks much more professional now.
@@ -914,7 +1003,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">YS</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/yellow-stone-resort.png"
+                      alt="Yellow Stone Resort"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>Yellow Stone Resort</strong>
@@ -925,7 +1021,9 @@ export default function Home() {
 
               {/* REVIEW 5 */}
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “Unicorn Nexus provided us with practical digital solutions
@@ -933,7 +1031,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">SM</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/shraddha-management-consultancy.jpeg"
+                      alt="Shraddha Management Consultancy"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>Shraddha Management Consultancy</strong>
@@ -945,7 +1050,9 @@ export default function Home() {
               {/* DUPLICATE CARDS FOR SMOOTH LOOP */}
 
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “Unicorn Nexus helped us improve our online visibility and
@@ -953,7 +1060,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">PC</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/PCMC Mayor Office.jpeg"
+                      alt="PCMC Mayor Office"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>PCMC Mayor Office</strong>
@@ -963,7 +1077,9 @@ export default function Home() {
               </div>
 
               <div className="testimonial-card">
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
 
                 <p>
                   “The team understood our requirements and helped us create
@@ -971,7 +1087,14 @@ export default function Home() {
                 </p>
 
                 <div className="testimonial-client">
-                  <div className="testimonial-avatar">UK</div>
+                  <div className="testimonial-avatar">
+                    <Image
+                      src="/clients/uro-kids-school.png"
+                      alt="Euro Kids School"
+                      width={46}
+                      height={46}
+                    />
+                  </div>
 
                   <div>
                     <strong>Euro Kids School</strong>

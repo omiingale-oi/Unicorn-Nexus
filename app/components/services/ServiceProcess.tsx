@@ -33,15 +33,9 @@ export default function ServiceProcess({
           {steps.map((step, index) => (
             <Reveal delay={index * 100} key={step.number}>
               <article className={styles.processItem}>
-                <div className={styles.processNumber}>{step.number}</div>
-
                 <span className={styles.processLabel}>STEP {step.number}</span>
                 <h3 className={styles.processTitle}>{step.title}</h3>
                 <p className={styles.processDesc}>{step.description}</p>
-
-                {index < steps.length - 1 && (
-                  <div className={styles.processConnector}>→</div>
-                )}
               </article>
             </Reveal>
           ))}

@@ -70,12 +70,13 @@ const approach = [
 ];
 
 const services = [
+  "GMB",
+  "Google Virtual Tour 360",
   "Google Map Services",
-  "Google Business Profile Management",
-  "Digital Marketing",
   "AI Marketing",
-  "Website Development",
+  "Digital Marketing",
   "Social Media Management",
+  "Website Development",
   "Real Estate Marketing",
 ];
 

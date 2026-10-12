@@ -1,10 +1,10 @@
 .qrPage {
-  --gold: #d4af37;
-  --gold-light: #f1d675;
-  --black: #050505;
-  --black-soft: #0d0d0d;
-  --white: #ffffff;
-  --muted: #999999;
+  --gold: #8a5a3d;
+  --gold-light: #ddb08c;
+  --black: #120b08;
+  --black-soft: #1b120d;
+  --white: #f7efe9;
+  --muted: #b9967d;
   --border: rgba(255, 255, 255, 0.1);
 
   min-height: 100vh;
@@ -133,7 +133,7 @@
 .resultBox {
   margin-top: 40px;
   padding: 32px;
-  border: 1px solid var(--gold-border, rgba(212, 175, 55, 0.3));
+  border: 1px solid var(--gold-border, rgba(138, 90, 61, 0.35));
   background: var(--black-soft);
   text-align: center;
 }
@@ -203,7 +203,7 @@
   width: 56px;
   height: 56px;
   margin: 0 auto 22px;
-  border: 1px solid rgba(212, 175, 55, 0.4);
+  border: 1px solid rgba(138, 90, 61, 0.4);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -297,7 +297,7 @@
   text-align: center;
   border: 1px solid var(--border);
   background:
-    radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12), transparent 60%),
+    radial-gradient(circle at 50% 30%, rgba(138, 90, 61, 0.15), transparent 60%),
     var(--black-soft);
   overflow: hidden;
 }
@@ -309,7 +309,7 @@
   width: 300px;
   height: 300px;
   transform: translate(-50%, -50%);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(138, 90, 61, 0.15);
   border-radius: 50%;
 }
 
@@ -381,11 +381,11 @@
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(212, 175, 55, 0.22),
+      rgba(138, 90, 61, 0.22),
       transparent 55%
     ),
     #090909;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  border-bottom: 1px solid rgba(138, 90, 61, 0.12);
 }
 
 .miniCoverImg {
@@ -418,14 +418,14 @@
   position: relative;
   z-index: 6;
 
-  color: #050505;
+  color: #120b08;
   font-size: 34px;
   font-weight: 800;
   line-height: 1;
   text-align: center;
 
   box-shadow:
-    0 0 0 1px rgba(212, 175, 55, 0.25),
+    0 0 0 1px rgba(138, 90, 61, 0.25),
     0 12px 30px rgba(0, 0, 0, 0.45);
 }
 

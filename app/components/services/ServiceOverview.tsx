@@ -42,7 +42,6 @@ export default function ServiceOverview({
                 src={image}
                 alt={imageAlt}
                 fill
-                priority
                 sizes="(max-width: 900px) 100vw, 50vw"
                 className={styles.overviewImage}
               />

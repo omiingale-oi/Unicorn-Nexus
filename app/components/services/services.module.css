@@ -1,19 +1,19 @@
 .servicePage {
-  --gold: #d4af37;
-  --gold-light: #f1d675;
-  --gold-soft: rgba(212, 175, 55, 0.18);
+  --gold: #8a5a3d;
+  --gold-light: #ddb08c;
+  --gold-soft: rgba(138, 90, 61, 0.2);
 
-  --black: #050505;
-  --black-soft: #090909;
-  --panel: #0d0d0d;
-  --panel-light: #111111;
+  --black: #120b08;
+  --black-soft: #1b120d;
+  --panel: #1d130f;
+  --panel-light: #271913;
 
-  --white: #ffffff;
-  --text: #eeeeee;
-  --muted: #999999;
+  --white: #f7efe9;
+  --text: #f3eadf;
+  --muted: #b9967d;
 
-  --border: rgba(255, 255, 255, 0.1);
-  --gold-border: rgba(212, 175, 55, 0.3);
+  --border: rgba(255, 255, 255, 0.08);
+  --gold-border: rgba(138, 90, 61, 0.35);
 
   background: var(--black);
   color: var(--white);
@@ -102,12 +102,12 @@
 
   background-image:
     linear-gradient(
-      rgba(212, 175, 55, 0.08) 1px,
+      rgba(138, 90, 61, 0.09) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(212, 175, 55, 0.08) 1px,
+      rgba(138, 90, 61, 0.09) 1px,
       transparent 1px
     );
 
@@ -224,7 +224,7 @@
   background: var(--gold);
 
   box-shadow:
-    0 0 12px rgba(212, 175, 55, 0.8);
+    0 0 12px rgba(138, 90, 61, 0.8);
 }
 
 .heroVideoWrap {
@@ -238,6 +238,55 @@
   border-radius: 20px;
 
   background: var(--panel);
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.75, 0.25, 1),
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.heroVideoPoster {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  overflow: hidden;
+  border: 0;
+  background: var(--panel);
+  cursor: pointer;
+}
+
+.heroVideoPosterImage {
+  object-fit: cover;
+}
+
+.heroVideoPlayIcon {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 1;
+
+  display: grid;
+  place-items: center;
+
+  width: 68px;
+  height: 68px;
+
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+  background: rgba(18, 11, 8, 0.76);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroVideoPoster:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
 }
 
 .heroVideo {
@@ -252,6 +301,24 @@
   filter:
     brightness(0.75)
     saturate(0.9);
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.75, 0.25, 1),
+    filter 0.8s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .heroVideoWrap:hover {
+    transform: translateY(-4px);
+    border-color: rgba(221, 176, 140, 0.65);
+    box-shadow:
+      0 22px 55px rgba(0, 0, 0, 0.3),
+      0 0 28px rgba(138, 90, 61, 0.12);
+  }
+
+  .heroVideoWrap:hover .heroVideo {
+    transform: scale(1.025);
+    filter: brightness(0.88) saturate(1);
+  }
 }
 /* =========================================================
    BUTTONS
@@ -546,7 +613,7 @@
   background:
     radial-gradient(
       circle at 80% 20%,
-      rgba(212, 175, 55, 0.07),
+      rgba(138, 90, 61, 0.07),
       transparent 30%
     ),
     #070707;
@@ -554,33 +621,57 @@
 
 .featureGrid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 16px;
 }
 
 .featureCard {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 370px;
+  padding: 0;
 
-  min-height: 270px;
-
-  padding: 30px;
-
-  border: 1px solid var(--border);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.04),
-      rgba(255, 255, 255, 0.015)
-    );
+  border: 1px solid rgba(217, 167, 44, 0.28);
+  background: #2c2d2f;
 
   overflow: hidden;
 
   transition:
     transform 0.35s ease,
     border-color 0.35s ease;
+}
+
+.featureCardArtwork {
+  position: relative;
+  flex: 0 0 190px;
+  overflow: hidden;
+  background: #2c2d2f;
+}
+
+.featureCardArtwork::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(18, 11, 8, 0.02) 45%,
+    rgba(18, 11, 8, 0.44) 100%
+  );
+}
+
+.featureCardImage {
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.featureCardBody {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 24px;
+  background: #2c2d2f;
 }
 
 .featureCard::before {
@@ -606,34 +697,47 @@
   border-color: var(--gold-border);
 }
 
+.featureCard:hover .featureCardImage {
+  transform: scale(1.05);
+}
+
+.featureCardTitle {
+  color: #f7efe9 !important;
+}
+
+.featureCardDesc {
+  color: #d0d0d0 !important;
+}
+
 .featureCard:hover::before {
   height: 100%;
 }
 
 .featureTop {
   display: flex;
+  width: 100%;
 
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 45px;
+  margin-bottom: 16px;
 }
 
 .featureIcon {
-  color: var(--gold);
+  color: #ddb08c;
 
   font-size: 24px;
 }
 
 .featureIndex {
-  color: #555;
+  color: #ddb08c;
 
   font-size: 10px;
   font-weight: 700;
 }
 
 .featureCardTitle {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 
   font-size: 20px;
 }
@@ -643,21 +747,113 @@
 
   margin: 0;
 
-  color: var(--muted);
+  color: #d0d0d0;
 
   font-size: 14px;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
-.cardArrow {
+.solutionCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 28px 24px 38px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #101010;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.solutionCard::before {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 0;
+  content: "";
+  height: 2px;
+  background: #d9a72c;
+  transition: width 0.4s ease;
+}
 
+.solutionCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(217, 167, 44, 0.45);
+}
+
+.solutionCard:hover::before {
+  width: 100%;
+}
+
+.solutionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.solutionIcon {
+  color: #d9a72c;
+  font-size: 19px;
+}
+
+.solutionIndex {
+  color: #777777;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.solutionContent {
+  max-width: 100%;
+}
+
+.solutionTitle {
+  margin: 0 0 12px;
+  color: #f7efe9;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.solutionDesc {
+  max-width: 520px;
+  margin: 0;
+  color: #a5a5a5;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.solutionArrow {
+  position: absolute;
   right: 28px;
-  bottom: 25px;
-
-  color: var(--gold);
-
+  bottom: 22px;
+  color: #d9a72c;
   font-size: 18px;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutionCard {
+    min-height: 220px;
+    padding: 24px 20px 38px;
+  }
+
+  .solutionTop {
+    margin-bottom: 30px;
+  }
 }
 
 /* =========================================================
@@ -691,18 +887,17 @@
 }
 
 .benefitCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 260px;
- 
+  text-align: center;
+
   padding: 30px;
  
-  border: 1px solid var(--border);
- 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.04),
-      rgba(255, 255, 255, 0.015)
-    );
+  border: 1px solid rgba(217, 167, 44, 0.28);
+  background: #2c2d2f;
  
   overflow: hidden;
  
@@ -717,9 +912,9 @@
   border-color: var(--gold-border);
 }
 .benefitIcon {
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 
-  color: var(--gold);
+  color: #ddb08c;
 
   font-size: 12px;
   font-weight: 700;
@@ -728,13 +923,14 @@
 .benefitCardTitle {
   margin: 0 0 12px;
 
+  color: #f7efe9;
   font-size: 19px;
 }
 
 .benefitCardDesc {
   margin: 0;
 
-  color: var(--muted);
+  color: #d0d0d0;
 
   font-size: 14px;
   line-height: 1.7;
@@ -852,7 +1048,7 @@
   background:
     radial-gradient(
       circle at 20% 50%,
-      rgba(212, 175, 55, 0.06),
+      rgba(138, 90, 61, 0.06),
       transparent 30%
     ),
     var(--black);
@@ -891,7 +1087,7 @@
 .audienceItem:hover {
   padding-left: 35px;
 
-  background: rgba(212, 175, 55, 0.03);
+  background: rgba(138, 90, 61, 0.03);
 }
 
 .audienceItem span {
@@ -1003,10 +1199,10 @@
   background:
     radial-gradient(
       circle at center,
-      rgba(212, 175, 55, 0.13),
+      rgba(138, 90, 61, 0.13),
       transparent 35%
     ),
-    #050505;
+    #120b08;
 }
 
 .ctaGrid {
@@ -1018,12 +1214,12 @@
 
   background-image:
     linear-gradient(
-      rgba(212, 175, 55, 0.08) 1px,
+      rgba(138, 90, 61, 0.08) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(212, 175, 55, 0.08) 1px,
+      rgba(138, 90, 61, 0.08) 1px,
       transparent 1px
     );
 
@@ -1041,13 +1237,13 @@
 
   transform: translate(-50%, -50%);
 
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(138, 90, 61, 0.1);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 100px rgba(212, 175, 55, 0.08),
-    inset 0 0 100px rgba(212, 175, 55, 0.03);
+    0 0 100px rgba(138, 90, 61, 0.08),
+    inset 0 0 100px rgba(138, 90, 61, 0.03);
 
   animation: ctaPulse 5s ease-in-out infinite;
 }
@@ -1272,7 +1468,7 @@
 
 .servicesCta {
   padding: 90px 0;
-  background: #050505;
+  background: #120b08;
   border-top: 1px solid rgba(216, 169, 39, 0.12);
 }
 
@@ -1346,7 +1542,7 @@
 .servicesCtaPrimary {
   background: #d8a927;
   border: 1px solid #d8a927;
-  color: #050505;
+  color: #120b08;
 }
 
 .servicesCtaPrimary:hover {

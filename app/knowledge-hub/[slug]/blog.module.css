@@ -1,6 +1,6 @@
 .blogPage {
   min-height: 100vh;
-  background: #050505;
+  background: #120b08;
   color: #ffffff;
 }
 
@@ -32,7 +32,7 @@
       rgba(225, 174, 24, 0.05),
       transparent 30%
     ),
-    #050505;
+    #120b08;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -469,7 +469,7 @@
 
 .articleContact:hover {
   background: #e5b51b;
-  color: #050505;
+  color: #120b08;
 
   transform: translateY(-2px);
 }
@@ -585,7 +585,7 @@
 
 .sidebarButton:hover {
   background: #e5b51b;
-  color: #050505;
+  color: #120b08;
 }
 
 .sidebarButton span {
@@ -658,7 +658,7 @@
       rgba(225, 181, 27, 0.08),
       transparent 35%
     ),
-    #050505;
+    #120b08;
 }
 
 .bottomCtaInner {
@@ -708,7 +708,7 @@
 
   background: #e5b51b;
 
-  color: #050505;
+  color: #120b08;
 
   font-size: 12px;
   font-weight: 800;

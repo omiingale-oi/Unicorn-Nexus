@@ -50,11 +50,12 @@ export default function ServiceMedia({ items }: ServiceMediaProps) {
                     <video
                       className={styles.mediaVideo}
                       src={item.src}
+                      autoPlay
                       controls
                       muted
                       loop
                       playsInline
-                      preload="metadata"
+                      preload="auto"
                     />
                   )}
 

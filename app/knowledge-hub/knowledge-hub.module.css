@@ -1,7 +1,7 @@
 
 .page {
   min-height: 100vh;
-  background: #050505;
+  background: #120b08;
   color: #ffffff;
 }
 
@@ -38,7 +38,7 @@
       rgba(216, 169, 39, 0.05),
       transparent 25%
     ),
-    #050505;
+    #120b08;
 }
 
 .heroGlowOne,
@@ -564,7 +564,7 @@
 
 .blogCard:hover .arrow {
   background: #d8a927;
-  color: #050505;
+  color: #120b08;
 }
 
 /* =========================
@@ -786,11 +786,11 @@
 
 .ctaButton:hover {
   background: #d8a927;
-  color: #050505;
+  color: #120b08;
 }
 
 .ctaButton:hover span {
-  color: #050505;
+  color: #120b08;
 }
 
 /* =========================

@@ -29,21 +29,24 @@ export default function ServiceFeatures({
           </div>
         </Reveal>
 
-        <div className={styles.featureGrid}>
+        <div className={styles.solutionGrid}>
           {items.map((item, index) => (
             <Reveal delay={index * 80} key={`${item.title}-${index}`}>
-              <article className={styles.featureCard}>
-                <div className={styles.featureTop}>
-                  <span className={styles.featureIcon}>{item.icon}</span>
-                  <span className={styles.featureIndex}>
+              <article className={styles.solutionCard}>
+                <div className={styles.solutionTop}>
+                  <span className={styles.solutionIcon}>{item.icon}</span>
+                  <span className={styles.solutionIndex}>
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
 
-                <h3 className={styles.featureCardTitle}>{item.title}</h3>
-                <p className={styles.featureCardDesc}>{item.description}</p>
-
-                <div className={styles.cardArrow}>↗</div>
+                <div className={styles.solutionContent}>
+                  <h3 className={styles.solutionTitle}>{item.title}</h3>
+                  <p className={styles.solutionDesc}>{item.description}</p>
+                </div>
+                <span className={styles.solutionArrow} aria-hidden="true">
+                  ↗
+                </span>
               </article>
             </Reveal>
           ))}

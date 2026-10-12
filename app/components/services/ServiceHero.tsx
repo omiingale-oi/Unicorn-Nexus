@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import ServiceHeroVideo from "./ServiceHeroVideo";
 import styles from "./services.module.css";
 
 interface ServiceHeroProps {
@@ -56,19 +56,26 @@ export default function ServiceHero({
             </div>
           </div>
 
-          <div className={styles.heroVideoWrap}>
-            <video
-              className={styles.heroVideo}
+          {poster ? (
+            <ServiceHeroVideo
               src={video}
               poster={poster}
-              aria-label={videoAlt}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
+              alt={videoAlt}
             />
-          </div>
+          ) : (
+            <div className={styles.heroVideoWrap}>
+              <video
+                className={styles.heroVideo}
+                src={video}
+                aria-label={videoAlt}
+                autoPlay
+                controls
+                muted
+                playsInline
+                preload="auto"
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -322,6 +322,10 @@ export default function ContactSection() {
                     Google Map Services
                   </option>
 
+                  <option value="Google Virtual Tour 360">
+                    Google Virtual Tour 360
+                  </option>
+
                   <option value="AI Marketing">
                     AI Marketing
                   </option>
@@ -330,8 +334,8 @@ export default function ContactSection() {
                     Digital Marketing
                   </option>
 
-                  <option value="Google Business Profile Management">
-                    Google Business Profile Management
+                  <option value="GMB">
+                    GMB
                   </option>
 
                   <option value="Website Development">

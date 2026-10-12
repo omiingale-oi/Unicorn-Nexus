@@ -5,7 +5,6 @@ export interface ServiceFeatureItem {
 }
 
 export interface ServiceBenefitItem {
-  icon: string;
   title: string;
   description: string;
 }
@@ -85,8 +84,241 @@ export interface ServiceData {
 }
 
 export const services: ServiceData[] = [
+
   // =========================================================
-  // 01 — GOOGLE MAP SERVICES
+  // 01 — GOOGLE BUSINESS PROFILE MANAGEMENT
+  // =========================================================
+  {
+    slug: "google-business-profile-management",
+    number: "02",
+    navTitle: "Google Business Profile Management",
+    metaTitle: "Google Business Profile Management | Unicorn Nexus 360",
+    metaDescription:
+      "Ongoing management of your Google Business Profile — posts, Q&A, messaging and insights — so your listing stays active, accurate and engaging.",
+
+    hero: {
+      eyebrow: "PROFILE MANAGEMENT",
+      title: "Google Business Profile Management",
+      tagline: "Keep Your Listing Active, Not Just Accurate.",
+      description:
+        "Beyond the pin on the map, your Google Business Profile is a living page customers interact with — questions, posts, offers and messages. We manage it continuously so it stays current and engaging.",
+      video: "/services/google-business-profile/google-business-profile.mp4",
+      videoAlt: "Google Business Profile dashboard with posts and customer messages open",
+    },
+
+    overview: {
+      eyebrow: "WHY IT MATTERS",
+      title: "A Listing That's Set Up but Never Updated Loses Momentum",
+      description:
+        "Many businesses set up their Google Business Profile once and never touch it again. Google notices — and so do customers. An active profile with recent posts, answered questions and prompt message replies signals a business that's actually open and paying attention. We handle the ongoing upkeep so your profile keeps working long after the initial setup.",
+      image: "/services/google-business-profile/gbpm.png",
+      imageAlt: "Business owner reviewing customer questions on their Google profile",
+    },
+
+    features: {
+      heading: "What Ongoing Profile Management Covers",
+      description: "The day-to-day upkeep that keeps your profile active, responsive and worth clicking on.",
+      items: [
+        { icon: "▤", title: "Regular Post Updates", description: "Offers, updates and announcements posted consistently so your profile never looks abandoned." },
+        { icon: "◈", title: "Q&A Monitoring", description: "We watch for and answer customer questions before incorrect answers from strangers go unchallenged." },
+        { icon: "✉", title: "Message Response Management", description: "Prompt replies to customer messages sent directly through your profile." },
+        { icon: "★", title: "Review Response Handling", description: "Professional, timely responses to new reviews as they come in, positive or negative." },
+        { icon: "▲", title: "Insights & Performance Review", description: "Monthly review of views, calls, direction requests and website clicks from your profile." },
+        { icon: "◎", title: "Category & Attribute Updates", description: "Keeping your listed services, attributes and categories current as your business evolves." },
+      ],
+    },
+
+    benefits: {
+      heading: "Why Ongoing Management Beats a One-Time Setup",
+      description: "A profile that's actively maintained performs differently than one that was set up once and left alone.",
+      image: "/services/google-business-profile/google-my-business.png",
+      imageAlt: "Business profile showing consistent, active management over time",
+      items: [
+        { title: "Sustained Visibility", description: "Active profiles are favored by Google's algorithm over dormant ones." },
+        { title: "Faster Customer Response", description: "Questions and messages get answered before a customer moves on to a competitor." },
+        { title: "Stronger Reputation Management", description: "Consistent review responses build trust with future customers reading them." },
+        { title: "Clear Performance Visibility", description: "Regular insight reports show exactly how your profile is performing." },
+      ],
+    },
+
+    process: {
+      heading: "How We Manage Your Profile Month to Month",
+      description: "A consistent monthly rhythm that keeps your profile active without you having to think about it.",
+      steps: [
+        { number: "01", title: "Baseline Review", description: "We assess your current profile activity and set a content and response schedule." },
+        { number: "02", title: "Ongoing Posting", description: "Regular posts and updates are published on a consistent schedule." },
+        { number: "03", title: "Daily Monitoring", description: "Questions, messages and reviews are checked and responded to promptly." },
+        { number: "04", title: "Monthly Reporting", description: "You receive a clear report on profile performance and what's working." },
+      ],
+    },
+
+    audience: {
+      description: "Ongoing profile management suits businesses that already have a Google Business Profile but don't have time to maintain it actively.",
+      items: ["Restaurants & Cafes", "Retail Stores", "Clinics & Healthcare Practices", "Salons & Wellness Centers", "Real Estate Agencies", "Educational Institutes", "Service-Based Businesses", "Multi-Location Brands"],
+    },
+
+    faq: {
+      heading: "Google Business Profile Management — Common Questions",
+      items: [
+        { question: "Is this different from the Google Map Services you offer?", answer: "Yes — Google Map Services focuses on initial setup and pin accuracy, while this is ongoing monthly management: posts, messages, reviews and insights." },
+        { question: "How often will you post updates to my profile?", answer: "We agree on a schedule based on your business — typically a few times per month, more often for businesses running frequent offers." },
+        { question: "Will you respond to messages on my behalf?", answer: "Yes, we can respond directly, or draft responses for your approval first — whichever you prefer." },
+        { question: "What happens if I get a negative review?", answer: "We respond professionally and promptly. We can't remove genuine reviews, but a thoughtful public response often reassures other customers." },
+        { question: "Do I need to provide content for the posts?", answer: "You can share offers, news or events, or we can create relevant posts based on your business and industry." },
+        { question: "Can you combine this with Google Map Services?", answer: "Yes — many clients start with map setup and optimization, then move into ongoing profile management." },
+        { question: "How do I know it's actually working?", answer: "You'll receive monthly reports showing profile views, calls, direction requests and engagement trends." },
+        { question: "What if my business information changes?", answer: "We update hours, categories and details as soon as you let us know, keeping your profile accurate at all times." },
+        { question: "Is this suitable for a small, single-location business?", answer: "Yes, this service scales to any business size — single location or multiple branches." },
+      ],
+    },
+
+    cta: {
+      eyebrow: "GET STARTED",
+      title: "Ready to Keep Your Profile Working for You?",
+      description: "Let's take the ongoing upkeep off your plate and keep your listing active every month.",
+      buttonText: "Start Managing My Profile",
+      buttonHref: "/contact",
+    },
+  },
+
+  // =========================================================
+  // 02 — GOOGLE VIRTUAL TOUR 360
+  // =========================================================
+  {
+    slug: "google-virtual-tour-360",
+    number: "08",
+    navTitle: "Google Virtual Tour 360",
+    metaTitle: "Google Virtual Tour 360 Services in India | Unicorn Nexus 360",
+    metaDescription:
+      "Google 360° virtual tours for Indian businesses — Street View-ready shoots, Maps publishing and Business Profile integration that bring more walk-ins.",
+
+    hero: {
+      eyebrow: "360° VIRTUAL TOURS",
+      title: "Google Virtual Tour 360",
+      tagline: "Let Customers Walk In Before They Arrive.",
+      description:
+        "We shoot, process and publish immersive 360° virtual tours of your business on Google Maps and Street View — so customers can explore your space, build trust and choose you before they ever step through the door.",
+      video: "/services/google-virtual-tour-360/google-virtual-tour-360-india.mp4",
+      videoAlt: "360-degree virtual tour of a business interior being explored on Google Maps",
+    },
+
+    overview: {
+      eyebrow: "WHY IT MATTERS",
+      title: "Customers Choose What They Can Already See",
+      description:
+        "Most customers decide where to go from their phone, long before they visit. A Google 360° virtual tour lets them look around your showroom, restaurant, clinic, hotel or office right from your Google Maps listing — seeing the ambience, layout and quality for themselves. Businesses with an immersive tour feel more transparent and trustworthy than listings with a handful of flat photos. We handle the full process: professional 360° photography, stitching, Street View-ready publishing and Business Profile integration.",
+      image: "/services/google-virtual-tour-360/google-virtual-tour-360-services-india.jpg",
+      imageAlt: "Photographer capturing a 360-degree virtual tour inside a retail showroom",
+    },
+
+    features: {
+      heading: "What Our Google Virtual Tour 360 Service Includes",
+      description:
+        "From on-site 360° capture to publishing on Google Maps, every step is handled so your virtual tour looks professional, loads smoothly and is easy for customers to find.",
+      items: [
+        {
+          icon: "◎",
+          title: "Professional 360° Photography",
+          description:
+            "On-site capture with professional 360° equipment, covering every key area of your premises with proper lighting, alignment and coverage.",
+        },
+        {
+          icon: "⌖",
+          title: "Google Maps & Street View Publishing",
+          description:
+            "Your tour is processed to Google's Street View standards and published so customers can step inside directly from Google Maps.",
+        },
+        {
+          icon: "✦",
+          title: "Business Profile Integration",
+          description:
+            "The tour is linked to your Google Business Profile, so it appears alongside your photos, reviews, hours and directions.",
+        },
+        {
+          icon: "◧",
+          title: "Image Stitching & Enhancement",
+          description:
+            "Careful stitching, colour correction and cleanup so the final tour looks seamless, bright and true to your space.",
+        },
+        {
+          icon: "▤",
+          title: "Multi-Floor & Multi-Room Coverage",
+          description:
+            "Logical walkthrough paths across rooms, floors and zones so visitors can move through your space naturally.",
+        },
+        {
+          icon: "◈",
+          title: "Website Embedding",
+          description:
+            "Embed the same 360° tour on your website or landing pages to keep visitors engaged and lift enquiries.",
+        },
+        {
+          icon: "↻",
+          title: "Tour Updates & Refresh",
+          description:
+            "Renovated, rebranded or re-laid-out? We refresh your tour so what customers see always matches reality.",
+        },
+      ],
+    },
+
+    benefits: {
+      heading: "Why Businesses Add a 360° Virtual Tour",
+      description:
+        "An immersive tour does more than look impressive — it reduces hesitation and gets more of the right customers through your door.",
+      image: "/services/google-virtual-tour-360/google-virtual-tour-360-local-seo-india.jpg",
+      imageAlt: "Business owner reviewing increased Google Maps views after publishing a 360 virtual tour",
+      items: [
+        { title: "Higher Listing Engagement", description: "Interactive tours hold attention longer than static photos and encourage more clicks on your listing." },
+        { title: "Instant Trust & Transparency", description: "Customers see exactly what to expect, which removes doubt before they visit or call." },
+        { title: "Stand Out From Competitors", description: "Many local listings still rely on a few photos — a full 360° tour sets you apart in the same search." },
+        { title: "More Qualified Visits", description: "Customers who've already toured your space arrive better informed and more ready to buy or book." },
+      ],
+    },
+
+    process: {
+      heading: "How We Create Your Google 360° Virtual Tour",
+      description:
+        "A clear, hassle-free process — from planning the shoot to publishing the live tour on Google.",
+      steps: [
+        { number: "01", title: "Consultation & Planning", description: "We understand your space, key areas to highlight and the best time for the shoot." },
+        { number: "02", title: "360° Shoot", description: "Our team captures every planned area on-site with professional 360° equipment." },
+        { number: "03", title: "Processing & Review", description: "Images are stitched, enhanced and organised into a smooth walkthrough for your approval." },
+        { number: "04", title: "Publish & Integrate", description: "The tour goes live on Google Maps and Street View, linked to your Business Profile and website." },
+      ],
+    },
+
+    audience: {
+      description:
+        "A Google 360° virtual tour works best for businesses where customers want to see the space before they visit.",
+      items: ["Hotels & Resorts", "Restaurants & Cafes", "Retail Stores & Showrooms", "Clinics & Hospitals", "Salons, Spas & Gyms", "Schools & Colleges", "Real Estate & Offices", "Banquet Halls & Event Venues"],
+    },
+
+    faq: {
+      heading: "Google Virtual Tour 360 — Common Questions",
+      items: [
+        { question: "What is a Google 360° virtual tour?", answer: "It's an immersive, walk-through view of your business interior that customers can explore on Google Maps and Street View, directly from your listing." },
+        { question: "Where will my virtual tour appear?", answer: "On Google Maps and Street View, connected to your Google Business Profile, and optionally embedded on your own website." },
+        { question: "Do I need an existing Google Business Profile?", answer: "It's best to have one, since the tour is linked to it. If you don't, we can set up and verify a profile as part of the project." },
+        { question: "How long does the shoot take?", answer: "Most small and mid-sized businesses can be shot in a few hours; larger or multi-floor spaces may need a full day." },
+        { question: "How long until the tour is live on Google?", answer: "We deliver the processed tour quickly, but Google reviews published imagery, so it can take a few days to a couple of weeks to appear." },
+        { question: "Will a virtual tour help my local SEO?", answer: "It improves engagement and trust signals on your listing, which supports local visibility. No one can guarantee a specific ranking, as Google controls its results." },
+        { question: "Can you cover multiple floors or multiple branches?", answer: "Yes, we plan walkthroughs across floors and rooms, and can shoot multiple branches with a consistent look." },
+        { question: "What if I renovate or change my layout later?", answer: "We offer tour refreshes so your virtual tour always matches your current space." },
+        { question: "Do I need to prepare anything before the shoot?", answer: "We share a short checklist — tidy the space, ensure lighting is on and plan staff presence — so the tour looks its best." },
+      ],
+    },
+
+    cta: {
+      eyebrow: "GET STARTED",
+      title: "Ready to Let Customers Step Inside Before They Visit?",
+      description:
+        "Let's create a professional Google 360° virtual tour that builds trust and brings more customers through your door.",
+      buttonText: "Book a 360° Tour Shoot",
+      buttonHref: "/contact",
+    },
+  },
+  // =========================================================
+  // 03 — GOOGLE MAP SERVICES
   // =========================================================
   {
     slug: "google-map-services",
@@ -178,10 +410,10 @@ export const services: ServiceData[] = [
       image: "/services/google-maps/google-maps-local-seo-india.png",
       imageAlt: "Local business owner reviewing improved Google Map s visibility results",
       items: [
-        { icon: "↗", title: "Higher Local Discoverability", description: "Show up more often when nearby customers search for what you offer." },
-        { icon: "✓", title: "Fewer Missed Customers", description: "Accurate hours and location prevent customers from arriving when you're closed or going to the wrong address." },
-        { icon: "⚡", title: "Faster Trust-Building", description: "A complete, active-looking listing signals credibility before a customer even calls." },
-        { icon: "↻", title: "Ongoing Accuracy", description: "We monitor and update your listing as your business changes, so it never goes stale." },
+        { title: "Higher Local Discoverability", description: "Show up more often when nearby customers search for what you offer." },
+        { title: "Fewer Missed Customers", description: "Accurate hours and location prevent customers from arriving when you're closed or going to the wrong address." },
+        { title: "Faster Trust-Building", description: "A complete, active-looking listing signals credibility before a customer even calls." },
+        { title: "Ongoing Accuracy", description: "We monitor and update your listing as your business changes, so it never goes stale." },
       ],
     },
 
@@ -226,103 +458,7 @@ export const services: ServiceData[] = [
   },
 
   // =========================================================
-  // 02 — GOOGLE BUSINESS PROFILE MANAGEMENT
-  // =========================================================
-  {
-    slug: "google-business-profile-management",
-    number: "02",
-    navTitle: "Google Business Profile Management",
-    metaTitle: "Google Business Profile Management | Unicorn Nexus 360",
-    metaDescription:
-      "Ongoing management of your Google Business Profile — posts, Q&A, messaging and insights — so your listing stays active, accurate and engaging.",
-
-    hero: {
-      eyebrow: "PROFILE MANAGEMENT",
-      title: "Google Business Profile Management",
-      tagline: "Keep Your Listing Active, Not Just Accurate.",
-      description:
-        "Beyond the pin on the map, your Google Business Profile is a living page customers interact with — questions, posts, offers and messages. We manage it continuously so it stays current and engaging.",
-      video: "/services/google-business-profile/google-business-profile.mp4",
-      videoAlt: "Google Business Profile dashboard with posts and customer messages open",
-    },
-
-    overview: {
-      eyebrow: "WHY IT MATTERS",
-      title: "A Listing That's Set Up but Never Updated Loses Momentum",
-      description:
-        "Many businesses set up their Google Business Profile once and never touch it again. Google notices — and so do customers. An active profile with recent posts, answered questions and prompt message replies signals a business that's actually open and paying attention. We handle the ongoing upkeep so your profile keeps working long after the initial setup.",
-      image: "/services/google-business-profile/gbpm.png",
-      imageAlt: "Business owner reviewing customer questions on their Google profile",
-    },
-
-    features: {
-      heading: "What Ongoing Profile Management Covers",
-      description: "The day-to-day upkeep that keeps your profile active, responsive and worth clicking on.",
-      items: [
-        { icon: "▤", title: "Regular Post Updates", description: "Offers, updates and announcements posted consistently so your profile never looks abandoned." },
-        { icon: "◈", title: "Q&A Monitoring", description: "We watch for and answer customer questions before incorrect answers from strangers go unchallenged." },
-        { icon: "✉", title: "Message Response Management", description: "Prompt replies to customer messages sent directly through your profile." },
-        { icon: "★", title: "Review Response Handling", description: "Professional, timely responses to new reviews as they come in, positive or negative." },
-        { icon: "▲", title: "Insights & Performance Review", description: "Monthly review of views, calls, direction requests and website clicks from your profile." },
-        { icon: "◎", title: "Category & Attribute Updates", description: "Keeping your listed services, attributes and categories current as your business evolves." },
-      ],
-    },
-
-    benefits: {
-      heading: "Why Ongoing Management Beats a One-Time Setup",
-      description: "A profile that's actively maintained performs differently than one that was set up once and left alone.",
-      image: "/services/google-business-profile/google-my-business.png",
-      imageAlt: "Business profile showing consistent, active management over time",
-      items: [
-        { icon: "↗", title: "Sustained Visibility", description: "Active profiles are favored by Google's algorithm over dormant ones." },
-        { icon: "✓", title: "Faster Customer Response", description: "Questions and messages get answered before a customer moves on to a competitor." },
-        { icon: "⚡", title: "Stronger Reputation Management", description: "Consistent review responses build trust with future customers reading them." },
-        { icon: "▤", title: "Clear Performance Visibility", description: "Regular insight reports show exactly how your profile is performing." },
-      ],
-    },
-
-    process: {
-      heading: "How We Manage Your Profile Month to Month",
-      description: "A consistent monthly rhythm that keeps your profile active without you having to think about it.",
-      steps: [
-        { number: "01", title: "Baseline Review", description: "We assess your current profile activity and set a content and response schedule." },
-        { number: "02", title: "Ongoing Posting", description: "Regular posts and updates are published on a consistent schedule." },
-        { number: "03", title: "Daily Monitoring", description: "Questions, messages and reviews are checked and responded to promptly." },
-        { number: "04", title: "Monthly Reporting", description: "You receive a clear report on profile performance and what's working." },
-      ],
-    },
-
-    audience: {
-      description: "Ongoing profile management suits businesses that already have a Google Business Profile but don't have time to maintain it actively.",
-      items: ["Restaurants & Cafes", "Retail Stores", "Clinics & Healthcare Practices", "Salons & Wellness Centers", "Real Estate Agencies", "Educational Institutes", "Service-Based Businesses", "Multi-Location Brands"],
-    },
-
-    faq: {
-      heading: "Google Business Profile Management — Common Questions",
-      items: [
-        { question: "Is this different from the Google Map Services you offer?", answer: "Yes — Google Map Services focuses on initial setup and pin accuracy, while this is ongoing monthly management: posts, messages, reviews and insights." },
-        { question: "How often will you post updates to my profile?", answer: "We agree on a schedule based on your business — typically a few times per month, more often for businesses running frequent offers." },
-        { question: "Will you respond to messages on my behalf?", answer: "Yes, we can respond directly, or draft responses for your approval first — whichever you prefer." },
-        { question: "What happens if I get a negative review?", answer: "We respond professionally and promptly. We can't remove genuine reviews, but a thoughtful public response often reassures other customers." },
-        { question: "Do I need to provide content for the posts?", answer: "You can share offers, news or events, or we can create relevant posts based on your business and industry." },
-        { question: "Can you combine this with Google Map Services?", answer: "Yes — many clients start with map setup and optimization, then move into ongoing profile management." },
-        { question: "How do I know it's actually working?", answer: "You'll receive monthly reports showing profile views, calls, direction requests and engagement trends." },
-        { question: "What if my business information changes?", answer: "We update hours, categories and details as soon as you let us know, keeping your profile accurate at all times." },
-        { question: "Is this suitable for a small, single-location business?", answer: "Yes, this service scales to any business size — single location or multiple branches." },
-      ],
-    },
-
-    cta: {
-      eyebrow: "GET STARTED",
-      title: "Ready to Keep Your Profile Working for You?",
-      description: "Let's take the ongoing upkeep off your plate and keep your listing active every month.",
-      buttonText: "Start Managing My Profile",
-      buttonHref: "/contact",
-    },
-  },
-
-  // =========================================================
-  // 03 — DIGITAL MARKETING
+  // 04 — DIGITAL MARKETING
   // =========================================================
   {
     slug: "digital-marketing",
@@ -370,10 +506,10 @@ export const services: ServiceData[] = [
       image: "/services/digital-marketing/digital-marketing-seo.png",
       imageAlt: "Marketing performance dashboard showing improved campaign ROI",
       items: [
-        { icon: "↗", title: "Compounding Results", description: "SEO and content build value over time instead of stopping when ad spend does." },
-        { icon: "◎", title: "Better Budget Efficiency", description: "Spend flows toward the channels actually driving results." },
-        { icon: "✓", title: "Consistent Messaging", description: "One strategy across channels means customers get a coherent brand experience." },
-        { icon: "▤", title: "Clear ROI Visibility", description: "Reporting tied to real business outcomes, not just impressions." },
+        { title: "Compounding Results", description: "SEO and content build value over time instead of stopping when ad spend does." },
+        { title: "Better Budget Efficiency", description: "Spend flows toward the channels actually driving results." },
+        { title: "Consistent Messaging", description: "One strategy across channels means customers get a coherent brand experience." },
+        { title: "Clear ROI Visibility", description: "Reporting tied to real business outcomes, not just impressions." },
       ],
     },
 
@@ -418,7 +554,7 @@ export const services: ServiceData[] = [
   },
 
   // =========================================================
-  // 04 — AI MARKETING
+  // 05 — AI MARKETING
   // =========================================================
   {
     slug: "ai-marketing",
@@ -466,10 +602,10 @@ export const services: ServiceData[] = [
       image: "/services/ai-marketing/ai-marketing-seo.png",
       imageAlt: "Marketing team reviewing AI-driven campaign performance gains",
       items: [
-        { icon: "⚡", title: "Faster Turnaround", description: "Campaigns and content go live in days, not weeks." },
-        { icon: "⌖", title: "Sharper Targeting", description: "Reach the audience segments most likely to actually convert." },
-        { icon: "▤", title: "Continuous Improvement", description: "Every campaign generates data that improves the next one." },
-        { icon: "◒", title: "Better Budget Efficiency", description: "Spend shifts toward what's working, adjusted in near real-time." },
+        { title: "Faster Turnaround", description: "Campaigns and content go live in days, not weeks." },
+        { title: "Sharper Targeting", description: "Reach the audience segments most likely to actually convert." },
+        { title: "Continuous Improvement", description: "Every campaign generates data that improves the next one." },
+        { title: "Better Budget Efficiency", description: "Spend shifts toward what's working, adjusted in near real-time." },
       ],
     },
 
@@ -514,7 +650,7 @@ export const services: ServiceData[] = [
   },
 
   // =========================================================
-  // 05 — WEBSITE DEVELOPMENT
+  // 06 — WEBSITE DEVELOPMENT
   // =========================================================
   {
     slug: "website-development",
@@ -562,10 +698,10 @@ export const services: ServiceData[] = [
       image: "/services/website-development/website-development-seo.png",
       imageAlt: "Business owner reviewing increased website enquiries and conversions",
       items: [
-        { icon: "↗", title: "More Qualified Enquiries", description: "Clear structure and calls-to-action turn more visitors into leads." },
-        { icon: "⚡", title: "Lower Bounce Rates", description: "Fast load times keep visitors on the page instead of leaving immediately." },
-        { icon: "✓", title: "Professional Credibility", description: "A polished site builds trust before a customer even contacts you." },
-        { icon: "▤", title: "Long-Term Flexibility", description: "Easy content management means the site stays current without ongoing developer costs." },
+        { title: "More Qualified Enquiries", description: "Clear structure and calls-to-action turn more visitors into leads." },
+        { title: "Lower Bounce Rates", description: "Fast load times keep visitors on the page instead of leaving immediately." },
+        { title: "Professional Credibility", description: "A polished site builds trust before a customer even contacts you." },
+        { title: "Long-Term Flexibility", description: "Easy content management means the site stays current without ongoing developer costs." },
       ],
     },
 
@@ -610,7 +746,7 @@ export const services: ServiceData[] = [
   },
 
   // =========================================================
-  // 06 — SOCIAL MEDIA MANAGEMENT
+  // 07 — SOCIAL MEDIA MANAGEMENT
   // =========================================================
   {
     slug: "social-media-management",
@@ -658,10 +794,10 @@ export const services: ServiceData[] = [
       image: "/services/social-media-management/social-media-management.png",
       imageAlt: "Growing social media engagement and follower trends displayed on screen",
       items: [
-        { icon: "↗", title: "Stronger Brand Recall", description: "Regular, familiar content keeps your business top of mind." },
-        { icon: "✓", title: "Better Audience Trust", description: "Prompt responses to comments and messages build a more engaged following." },
-        { icon: "⚡", title: "Time Saved", description: "You get an active social presence without personally managing it day to day." },
-        { icon: "▤", title: "Clear Growth Tracking", description: "Reporting shows how your following and engagement are actually trending." },
+        { title: "Stronger Brand Recall", description: "Regular, familiar content keeps your business top of mind." },
+        { title: "Better Audience Trust", description: "Prompt responses to comments and messages build a more engaged following." },
+        { title: "Time Saved", description: "You get an active social presence without personally managing it day to day." },
+        { title: "Clear Growth Tracking", description: "Reporting shows how your following and engagement are actually trending." },
       ],
     },
 
@@ -706,7 +842,7 @@ export const services: ServiceData[] = [
   },
 
   // =========================================================
-  // 07 — REAL ESTATE MARKETING
+  // 08 — REAL ESTATE MARKETING
   // =========================================================
   {
     slug: "real-estate-marketing",
@@ -754,10 +890,10 @@ export const services: ServiceData[] = [
       image: "/services/real-estate-marketing/real-estate-marketing.png",
       imageAlt: "Real estate team reviewing increased qualified property enquiries",
       items: [
-        { icon: "↗", title: "More Qualified Enquiries", description: "Targeting reaches buyers actively searching in your project's location and budget." },
-        { icon: "✓", title: "Stronger First Impressions", description: "Quality visuals and virtual tours build credibility before any site visit." },
-        { icon: "⚡", title: "Faster Lead Response", description: "Structured capture means fewer enquiries slip through the cracks." },
-        { icon: "▤", title: "Clear Campaign ROI", description: "Reporting tied to actual enquiries and site visits, not just impressions." },
+        { title: "More Qualified Enquiries", description: "Targeting reaches buyers actively searching in your project's location and budget." },
+        { title: "Stronger First Impressions", description: "Quality visuals and virtual tours build credibility before any site visit." },
+        { title: "Faster Lead Response", description: "Structured capture means fewer enquiries slip through the cracks." },
+        { title: "Clear Campaign ROI", description: "Reporting tied to actual enquiries and site visits, not just impressions." },
       ],
     },
 

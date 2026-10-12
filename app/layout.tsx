@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "./components/Header";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import SiteFooter from "./components/SiteFooter";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -13,11 +14,13 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Unicorn Nexus provides Google Map Services, Google Business Profile Management, AI Marketing, Digital Marketing, Social Media Management, Website Development and Real Estate Marketing across India.",
+    "Unicorn Nexus provides Google Map Services, Google Virtual Tour 360 Services, GMB, AI Marketing, Digital Marketing, Social Media Management, Website Development and Real Estate Marketing across India.",
 
   keywords: [
     "Google Map Services",
-    "Google Business Profile Management",
+    "Google Virtual Tour 360 Services",
+    "GMB",
+    
     "GMB Management",
     "AI Marketing",
     "Digital Marketing",
@@ -53,6 +56,7 @@ export default function RootLayout({
 
         <SiteFooter />
 
+        <ScrollToTopButton />
         <WhatsAppButton />
       </body>
     </html>
