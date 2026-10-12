@@ -4898,6 +4898,19 @@ main :is(h1, h2) {
   transform: translateX(4px);
 }
 
+.footer-column a.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-social-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: currentColor;
+}
+
 /* BOTTOM */
 
 .footer-bottom {

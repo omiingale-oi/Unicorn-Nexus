@@ -83,7 +83,7 @@ const clients = [
   {
     name: "PCMC Mayor Office",
     category: "Government",
-    logo: "/clients/PCMC Mayor Office.jpeg",
+    logo: "/clients/pcmc-mayor-office.jpeg",
     
   },
   {
@@ -921,7 +921,7 @@ export default function Home() {
                 <div className="testimonial-client">
                   <div className="testimonial-avatar">
                     <Image
-                      src="/clients/PCMC Mayor Office.jpeg"
+                      src="/clients/pcmc-mayor-office.jpeg"
                       alt="PCMC Mayor Office"
                       width={46}
                       height={46}
@@ -1062,7 +1062,7 @@ export default function Home() {
                 <div className="testimonial-client">
                   <div className="testimonial-avatar">
                     <Image
-                      src="/clients/PCMC Mayor Office.jpeg"
+                      src="/clients/pcmc-mayor-office.jpeg"
                       alt="PCMC Mayor Office"
                       width={46}
                       height={46}

@@ -90,7 +90,7 @@ export const services: ServiceData[] = [
   // =========================================================
   {
     slug: "google-business-profile-management",
-    number: "02",
+    number: "01",
     navTitle: "Google Business Profile Management",
     metaTitle: "Google Business Profile Management | Unicorn Nexus 360",
     metaDescription:
@@ -186,7 +186,7 @@ export const services: ServiceData[] = [
   // =========================================================
   {
     slug: "google-virtual-tour-360",
-    number: "08",
+    number: "02",
     navTitle: "Google Virtual Tour 360",
     metaTitle: "Google Virtual Tour 360 Services in India | Unicorn Nexus 360",
     metaDescription:
@@ -322,7 +322,7 @@ export const services: ServiceData[] = [
   // =========================================================
   {
     slug: "google-map-services",
-    number: "01",
+    number: "03",
     navTitle: "Google Map Services",
     metaTitle: "Google Map Services in India | Unicorn Nexus 360",
     metaDescription:
@@ -462,7 +462,7 @@ export const services: ServiceData[] = [
   // =========================================================
   {
     slug: "digital-marketing",
-    number: "03",
+    number: "05",
     navTitle: "Digital Marketing",
     metaTitle: "Digital Marketing Services in India | Unicorn Nexus 360",
     metaDescription:
@@ -654,7 +654,7 @@ export const services: ServiceData[] = [
   // =========================================================
   {
     slug: "website-development",
-    number: "05",
+    number: "07",
     navTitle: "Website Development",
     metaTitle: "Website Development Services in India | Unicorn Nexus 360",
     metaDescription:
@@ -846,7 +846,7 @@ export const services: ServiceData[] = [
   // =========================================================
   {
     slug: "real-estate-marketing",
-    number: "07",
+    number: "08",
     navTitle: "Real Estate Marketing",
     metaTitle: "Real Estate Marketing Services in India | Unicorn Nexus 360",
     metaDescription:
