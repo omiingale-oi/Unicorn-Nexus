@@ -9,12 +9,12 @@ import WhatsAppButton from "./components/WhatsAppButton";
 export const metadata: Metadata = {
   title: {
     default:
-      "Unicorn Nexus | Google Map Services, Digital Marketing & AI Marketing",
+      "Unicorn Nexus | Google Maps, Digital & AI Marketing",
     template: "%s | Unicorn Nexus",
   },
 
   description:
-    "Unicorn Nexus provides Google Map Services, Google Virtual Tour 360 Services, GMB, AI Marketing, Digital Marketing, Social Media Management, Website Development and Real Estate Marketing across India.",
+    "Unicorn Nexus offers Google Maps services, 360° virtual tours, GMB, AI and digital marketing, website development, and real estate marketing across India.",
 
   keywords: [
     "Google Map Services",
