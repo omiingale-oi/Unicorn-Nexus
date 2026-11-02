@@ -84,13 +84,13 @@ export default function Footer() {
             +91-9112151399
           </a>
 
-          <a className="footer-social-link" href="mailto:unicornnexus360@gmail.com">
+          <Link className="footer-social-link" href="/contact#contact-form">
             <svg className="footer-social-icon" viewBox="0 0 24 24" aria-hidden="true">
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
               <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
-            unicornnexus360@gmail.com
-          </a>
+            Send an enquiry
+          </Link>
 
           <a
             className="footer-social-link"

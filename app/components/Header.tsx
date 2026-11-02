@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -8,6 +9,24 @@ const services = [
   {
     name: "GMB",
     href: "/services/google-business-profile-management",
+    locations: [
+      {
+        name: "GMB Pune",
+        href: "/gmb-service-in-pune",
+      },
+      {
+        name: "GMB Navi Mumbai",
+        href: "/gmb-service-in-navi-mumbai",
+      },
+      {
+        name: "GMB Goa",
+        href: "/gmb-service-in-goa",
+      },
+      {
+        name: "GMB Nashik",
+        href: "/gmb-service-in-nashik",
+      },
+    ],
   },
   {
     name: "Google Virtual Tour 360",
@@ -24,6 +43,24 @@ const services = [
   {
     name: "Digital Marketing",
     href: "/services/digital-marketing",
+    locations: [
+      {
+        name: "Digital Marketing Pune",
+        href: "/digital-marketing-services-in-pune",
+      },
+      {
+        name: "Digital Marketing Navi Mumbai",
+        href: "/digital-marketing-services-in-navi-mumbai",
+      },
+      {
+        name: "Digital Marketing Goa",
+        href: "/digital-marketing-services-in-goa",
+      },
+      {
+        name: "Digital Marketing Nashik",
+        href: "/digital-marketing-services-in-nashik",
+      },
+    ],
   },
   {
     name: "Social Media Management",
@@ -32,6 +69,24 @@ const services = [
   {
     name: "Website Development",
     href: "/services/website-development",
+    locations: [
+      {
+        name: "Website Development Pune",
+        href: "/website-development-company-in-pune",
+      },
+      {
+        name: "Website Development Navi Mumbai",
+        href: "/website-development-company-in-navi-mumbai",
+      },
+      {
+        name: "Website Development Goa",
+        href: "/website-development-company-in-goa",
+      },
+      {
+        name: "Website Development Nashik",
+        href: "/website-development-company-in-nashik",
+      },
+    ],
   },
   {
     name: "Real Estate Marketing",
@@ -42,10 +97,12 @@ const services = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServiceOpen, setMobileServiceOpen] = useState("");
 
   const closeMobile = () => {
     setMobileOpen(false);
     setServicesOpen(false);
+    setMobileServiceOpen("");
   };
 
   return (
@@ -53,11 +110,7 @@ export default function Header() {
       <div className="header-inner">
 
         {/* LOGO */}
-        <Link
-          href="/"
-          className="brand"
-          onClick={closeMobile}
-        >
+        <Link href="/" className="brand" onClick={closeMobile}>
           <Image
             src="/logo.png"
             alt="Unicorn Nexus 360"
@@ -85,7 +138,6 @@ export default function Header() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            {/* SERVICES NOW OPENS MAIN SERVICES PAGE */}
             <Link
               href="/services"
               className="nav-link services-button"
@@ -97,15 +149,44 @@ export default function Header() {
 
             {servicesOpen && (
               <div className="services-dropdown">
+
                 {services.map((service) => (
-                  <Link
+                  <div
                     key={service.href}
-                    href={service.href}
-                    className="service-dropdown-link"
+                    className="service-dropdown-item"
                   >
-                    {service.name}
-                  </Link>
+                    <Link
+                      href={service.href}
+                      className="service-dropdown-link"
+                    >
+                      {service.name}
+
+                      {Array.isArray(service.locations) &&
+                        service.locations.length > 0 && (
+                          <span className="dropdown-arrow">›</span>
+                        )}
+                    </Link>
+
+                    {/* DESKTOP LOCATION SUBMENU */}
+                    {Array.isArray(service.locations) &&
+                      service.locations.length > 0 && (
+                        <div className="location-dropdown">
+
+                          {service.locations.map((location) => (
+                            <Link
+                              key={location.href}
+                              href={location.href}
+                              className="location-dropdown-link"
+                            >
+                              {location.name}
+                            </Link>
+                          ))}
+
+                        </div>
+                      )}
+                  </div>
                 ))}
+
               </div>
             )}
           </div>
@@ -129,10 +210,7 @@ export default function Header() {
         </nav>
 
         {/* DESKTOP CTA */}
-        <Link
-          href="/contact"
-          className="header-cta"
-        >
+        <Link href="/contact" className="header-cta">
           Get Started
         </Link>
 
@@ -141,6 +219,7 @@ export default function Header() {
           className="mobile-menu-button"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
+          aria-expanded={mobileOpen}
         >
           <span></span>
           <span></span>
@@ -169,28 +248,78 @@ export default function Header() {
             About
           </Link>
 
-          {/* MOBILE SERVICES */}
           <Link
             href="/services"
-            className="mobile-nav-link mobile-services-button"
+            className="mobile-nav-link"
             onClick={closeMobile}
           >
-            Services
-            <span>⌄</span>
+            All Services
           </Link>
 
-          {/* SERVICE SUB-LINKS */}
+          {/* MOBILE SERVICE DROPDOWNS */}
           <div className="mobile-services">
+
             {services.map((service) => (
-              <Link
+              <div
                 key={service.href}
-                href={service.href}
-                className="mobile-service-link"
-                onClick={closeMobile}
+                className="mobile-service-item"
               >
-                {service.name}
-              </Link>
+
+                <div className="mobile-service-heading">
+
+                  <Link
+                    href={service.href}
+                    className="mobile-service-link"
+                    onClick={closeMobile}
+                  >
+                    {service.name}
+                  </Link>
+
+                  {Array.isArray(service.locations) &&
+                    service.locations.length > 0 && (
+                      <button
+                        className="mobile-submenu-toggle"
+                        onClick={() =>
+                          setMobileServiceOpen(
+                            mobileServiceOpen === service.name
+                              ? ""
+                              : service.name
+                          )
+                        }
+                        aria-label={`Toggle ${service.name} locations`}
+                        aria-expanded={
+                          mobileServiceOpen === service.name
+                        }
+                      >
+                        {mobileServiceOpen === service.name ? "−" : "+"}
+                      </button>
+                    )}
+
+                </div>
+
+                {/* MOBILE LOCATION SUBMENU */}
+                {Array.isArray(service.locations) &&
+                  service.locations.length > 0 &&
+                  mobileServiceOpen === service.name && (
+                    <div className="mobile-location-dropdown">
+
+                      {service.locations.map((location) => (
+                        <Link
+                          key={location.href}
+                          href={location.href}
+                          className="mobile-location-link"
+                          onClick={closeMobile}
+                        >
+                          {location.name}
+                        </Link>
+                      ))}
+
+                    </div>
+                  )}
+
+              </div>
             ))}
+
           </div>
 
           <Link

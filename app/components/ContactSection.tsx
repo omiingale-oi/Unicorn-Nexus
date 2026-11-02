@@ -214,15 +214,15 @@ export default function ContactSection() {
 
             {/* EMAIL */}
             <a
-              href="mailto:unicornnexus360@gmail.com"
+              href="#contact-form"
               className={`${styles.contactInfoCard} ${styles.contactClickable}`}
             >
               <div className={styles.contactInfoIcon}>✉</div>
 
               <div>
                 <span>EMAIL US</span>
-                <h3>unicornnexus360@gmail.com</h3>
-                <p>Send us your enquiry</p>
+                <h3>Contact Form</h3>
+                <p>Send your enquiry securely</p>
               </div>
 
               <span className={styles.contactArrow}>↗</span>
@@ -259,6 +259,7 @@ export default function ContactSection() {
 
             <form
               className={styles.contactForm}
+              id="contact-form"
               onSubmit={handleSubmit}
             >
               <div className={styles.formRow}>

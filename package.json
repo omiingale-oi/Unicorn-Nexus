@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT -H 0.0.0.0",
+    "start": "next start -H 0.0.0.0",
     "lint": "eslint"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",
+    "install": "^0.13.0",
     "libphonenumber-js": "^1.13.11",
     "next": "16.3.0",
     "qrcode": "^1.5.4",

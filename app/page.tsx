@@ -778,12 +778,7 @@ export default function Home() {
       ].map((industry) => (
         <div className="industry-card" key={industry.number}>
 
-          <div
-            className="industry-image"
-            style={{
-              backgroundImage: `url(${industry.image})`,
-            }}
-          />
+          <div className={`industry-image industry-image-${industry.number}`} />
 
           <div className="industry-overlay" />
 
