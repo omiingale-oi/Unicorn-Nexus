@@ -12,19 +12,19 @@ const services = [
     locations: [
       {
         name: "GMB Pune",
-        href: "/gmb-service-in-pune",
+        href: "/services/gmb-service-in-pune",
       },
       {
         name: "GMB Navi Mumbai",
-        href: "/gmb-service-in-navi-mumbai",
+        href: "/services/gmb-service-in-navi-mumbai",
       },
       {
         name: "GMB Goa",
-        href: "/gmb-service-in-goa",
+        href: "/services/gmb-service-in-goa",
       },
       {
         name: "GMB Nashik",
-        href: "/gmb-service-in-nashik",
+        href: "/services/gmb-service-in-nashik",
       },
     ],
   },
@@ -46,19 +46,19 @@ const services = [
     locations: [
       {
         name: "Digital Marketing Pune",
-        href: "/digital-marketing-services-in-pune",
+        href: "/services/digital-marketing-services-in-pune",
       },
       {
         name: "Digital Marketing Navi Mumbai",
-        href: "/digital-marketing-services-in-navi-mumbai",
+        href: "/services/digital-marketing-services-in-navi-mumbai",
       },
       {
         name: "Digital Marketing Goa",
-        href: "/digital-marketing-services-in-goa",
+        href: "/services/digital-marketing-services-in-goa",
       },
       {
         name: "Digital Marketing Nashik",
-        href: "/digital-marketing-services-in-nashik",
+        href: "/services/digital-marketing-services-in-nashik",
       },
     ],
   },
@@ -72,19 +72,19 @@ const services = [
     locations: [
       {
         name: "Website Development Pune",
-        href: "/website-development-company-in-pune",
+        href: "/services/website-development-company-in-pune",
       },
       {
         name: "Website Development Navi Mumbai",
-        href: "/website-development-company-in-navi-mumbai",
+        href: "/services/website-development-company-in-navi-mumbai",
       },
       {
         name: "Website Development Goa",
-        href: "/website-development-company-in-goa",
+        href: "/services/website-development-company-in-goa",
       },
       {
         name: "Website Development Nashik",
-        href: "/website-development-company-in-nashik",
+        href: "/services/website-development-company-in-nashik",
       },
     ],
   },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { services, getServiceBySlug } from "@/data/services";
+import { getLocationPageBySlug, locationPages } from "@/data/location-pages";
 
 import ServiceHero from "@/app/components/services/ServiceHero";
 import ServiceOverview from "@/app/components/services/ServiceOverview";
@@ -11,6 +12,7 @@ import ServiceProcess from "@/app/components/services/ServiceProcess";
 import ServiceFAQ from "@/app/components/services/ServiceFAQ";
 import ServiceCTA from "@/app/components/services/ServiceCTA";
 import Reveal from "@/app/components/services/Reveal";
+import LocationServiceContent from "@/app/components/services/LocationServiceContent";
 
 import styles from "@/app/components/services/services.module.css";
 
@@ -19,7 +21,10 @@ interface ServicePageProps {
 }
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return [
+    ...services.map((service) => ({ slug: service.slug })),
+    ...locationPages.map((page) => ({ slug: page.slug })),
+  ];
 }
 
 export async function generateMetadata({
@@ -29,6 +34,25 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
 
   if (!service) {
+    const locationPage = getLocationPageBySlug(slug);
+
+    if (locationPage) {
+      const canonicalUrl = `https://www.unicornnexus360.com/services/${locationPage.slug}`;
+
+      return {
+        title: locationPage.metaTitle,
+        description: locationPage.metaDescription,
+        alternates: { canonical: canonicalUrl },
+        openGraph: {
+          title: locationPage.metaTitle,
+          description: locationPage.metaDescription,
+          url: canonicalUrl,
+          siteName: "Unicorn Nexus 360",
+          type: "website",
+        },
+      };
+    }
+
     return { title: "Service Not Found | Unicorn Nexus 360" };
   }
 
@@ -70,7 +94,25 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlug(slug);
 
   if (!service) {
-    notFound();
+    const locationPage = getLocationPageBySlug(slug);
+
+    if (!locationPage) {
+      notFound();
+    }
+
+    const serviceInfo = getServiceBySlug(locationPage.service);
+
+    if (!serviceInfo) {
+      notFound();
+    }
+
+    return (
+      <LocationServiceContent
+        locationPage={locationPage}
+        serviceInfo={serviceInfo}
+        canonicalUrl={`https://www.unicornnexus360.com/services/${locationPage.slug}`}
+      />
+    );
   }
 
   const serviceUrl = `https://unicornnexus360.com/services/${service.slug}`;

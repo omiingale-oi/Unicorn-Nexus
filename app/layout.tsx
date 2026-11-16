@@ -6,6 +6,36 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import SiteFooter from "./components/SiteFooter";
 import WhatsAppButton from "./components/WhatsAppButton";
 
+const SITE_URL = "https://www.unicornnexus360.com";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Unicorn Nexus 360",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+      telephone: "+91 91121 51399",
+      areaServed: {
+        "@type": "Country",
+        name: "India",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Unicorn Nexus 360",
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: {
     default:
@@ -30,13 +60,13 @@ export const metadata: Metadata = {
     "Google Maps Marketing India",
   ],
 
-  metadataBase: new URL("https://unicornnexus360.com"),
+  metadataBase: new URL(SITE_URL),
 
   openGraph: {
     title: "Unicorn Nexus | Digital Visibility & Growth Solutions",
     description:
       "Helping businesses build stronger digital visibility and sustainable growth across India.",
-    url: "https://unicornnexus360.com",
+    url: SITE_URL,
     siteName: "Unicorn Nexus",
     type: "website",
   },
@@ -50,6 +80,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
         <Header />
 
         {children}

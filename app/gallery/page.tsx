@@ -1,7 +1,40 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import styles from "./gallery.module.css";
+
+const SITE_URL = "https://www.unicornnexus360.com";
+const PAGE_URL = `${SITE_URL}/gallery`;
+const PAGE_DESCRIPTION =
+  "Explore the creative work, projects and digital experiences of Unicorn Nexus 360.";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description: PAGE_DESCRIPTION,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: "Unicorn Nexus 360 Gallery",
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Unicorn Nexus 360",
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/gallery/gallery-hero.jpg`,
+        alt: "Unicorn Nexus 360 gallery",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unicorn Nexus 360 Gallery",
+    description: PAGE_DESCRIPTION,
+    images: [`${SITE_URL}/gallery/gallery-hero.jpg`],
+  },
+};
 
 function getGalleryImages() {
   const galleryPath = path.join(process.cwd(), "public", "gallery");
@@ -38,9 +71,31 @@ function getGalleryImages() {
 
 export default function GalleryPage() {
   const galleryImages = getGalleryImages();
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${PAGE_URL}#webpage`,
+    name: "Unicorn Nexus 360 Gallery",
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    isPartOf: {
+      "@id": `${SITE_URL}/#website`,
+    },
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    primaryImageOfPage: `${SITE_URL}/gallery/gallery-hero.jpg`,
+    inLanguage: "en",
+  };
 
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.glowOne} />
@@ -72,7 +127,7 @@ export default function GalleryPage() {
                   src="/gallery/gallery-hero.jpg"
                   alt="Unicorn Nexus 360°"
                   fill
-                  priority
+                  preload
                   sizes="(max-width: 650px) 100vw, 45vw"
                   className={styles.heroImageElement}
                 />
