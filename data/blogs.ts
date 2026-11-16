@@ -7,9 +7,107 @@ export type Blog = {
   image: string;
   excerpt: string;
   content: string[];
+  sections?: {
+    heading: string;
+    paragraphs?: string[];
+    orderedList?: string[];
+    bulletList?: string[];
+  }[];
 };
 
 export const blogs: Blog[] = [
+  {
+    slug: "website-development-complete-guide",
+    title: "Website Development: A Complete Guide from Idea to Launch",
+    category: "Website Development",
+    date: "November 16, 2026",
+    readTime: "6 min read",
+    image: "/knowledge-hub/website-development-guide.jpg",
+    excerpt:
+      "A beginner-friendly guide to how websites are planned, designed, built and launched, with a practical learning roadmap and essential tools.",
+    content: [],
+    sections: [
+      {
+        heading: "What Is Website Development?",
+        paragraphs: [
+          "Website development is the process of building and maintaining a website that people can open in a browser and use. It can be as simple as a personal portfolio or as complex as a global e-commerce platform. Businesses, creators and students all benefit from having an online presence, making web development a valuable skill to learn.",
+        ],
+      },
+      {
+        heading: "The Three Core Layers of a Website",
+        paragraphs: [
+          "Most websites bring together a user-facing interface, server-side functionality and a place to store information. Understanding these layers makes it easier to see how a website works as a whole.",
+        ],
+        bulletList: [
+          "Frontend: The layouts, colors, typography, buttons, images and interactions visitors see. HTML gives a page its structure, CSS controls its appearance, and JavaScript adds behavior such as menus, form validation and dynamically loaded data. Frameworks like React, Vue and Next.js help organize larger applications.",
+          "Backend: The server-side code that handles requests, business logic, data processing and security. Common options include Node.js, Python frameworks such as Django and Flask, PHP and Java.",
+          "Database: The system that stores information such as users, products and posts. MySQL and PostgreSQL are relational databases; MongoDB is a popular NoSQL option.",
+        ],
+      },
+      {
+        heading: "The Website Development Process",
+        paragraphs: [
+          "A clear process helps turn an idea into a website that is useful, reliable and ready for visitors:",
+        ],
+        orderedList: [
+          "Planning: Define the website’s purpose, intended audience and required pages.",
+          "Design: Create wireframes and visual mockups. Figma is one commonly used design tool.",
+          "Frontend development: Build the interface and make it work across screen sizes.",
+          "Backend and database: Add features such as accounts, forms, data storage or payments when the project needs them.",
+          "Testing: Check functionality and appearance across browsers and devices, including phones, tablets and desktops.",
+          "Deployment: Publish the site with a hosting provider and connect its domain name.",
+          "Maintenance: Keep software up to date, fix issues and review security regularly.",
+        ],
+      },
+      {
+        heading: "A Learning Roadmap for Beginners",
+        paragraphs: [
+          "You do not need to learn everything at once. Build a foundation and add new skills as your projects grow:",
+        ],
+        orderedList: [
+          "Month 1: Learn HTML and CSS, then create two or three simple pages.",
+          "Months 2–3: Study JavaScript fundamentals and the DOM. Try small projects such as a to-do list or calculator.",
+          "Months 4–5: Learn Git and GitHub, then explore a frontend framework such as React.",
+          "Month 6 onward: Learn a backend language and database, then put the pieces together in a full-stack project.",
+        ],
+        bulletList: [
+          "Build projects instead of only watching tutorials. Writing code regularly helps turn concepts into practical skills.",
+        ],
+      },
+      {
+        heading: "Best Practices Worth Following",
+        bulletList: [
+          "Mobile-first design: Make sure layouts work well on phones as well as larger screens.",
+          "Performance: Optimize images and avoid unnecessary code so pages load promptly.",
+          "SEO: Use meaningful headings, page metadata and clear URLs to help people and search engines understand your content.",
+          "Security: Use HTTPS, validate user input and store passwords with secure password hashing.",
+          "Accessibility: Include useful alternative text, sufficient color contrast and keyboard navigation.",
+        ],
+      },
+      {
+        heading: "Essential Tools",
+        bulletList: [
+          "Code editor: Visual Studio Code",
+          "Version control: Git and GitHub",
+          "Design: Figma",
+          "Hosting: Netlify, Vercel or GitHub Pages; available plans and features vary by provider.",
+          "Debugging: Browser DevTools for inspecting pages and investigating performance.",
+        ],
+      },
+      {
+        heading: "Career Opportunities",
+        paragraphs: [
+          "Web development can lead to frontend, backend or full-stack roles, as well as freelance work. IT companies, startups and clients on freelance platforms all need people who can build and maintain websites. Remote opportunities are available too, depending on the role and employer.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Website development is approachable for beginners, but becoming proficient takes consistent practice. Start with a simple page, publish it and gradually add more features. Every experienced developer once started with a first project—your best time to build yours is today.",
+        ],
+      },
+    ],
+  },
   {
     slug: "how-google-maps-helps-businesses-get-found",
     title: "How Google Maps Helps Businesses Get Found by Local Customers",

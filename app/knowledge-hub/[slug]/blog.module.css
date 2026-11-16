@@ -393,6 +393,28 @@
   line-height: 1.85;
 }
 
+.article h2 {
+  margin: 48px 0 18px;
+  color: #ffffff;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.25;
+}
+
+.article ul,
+.article ol {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 28px;
+  padding-left: 26px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.article li::marker {
+  color: #e5b51b;
+}
+
 /* =========================
    DIVIDER
 ========================= */
@@ -525,7 +547,7 @@
 
 .sidebarLabel,
 .exploreLabel {
-  color: #e5b51b;
+  color: #f5c542;
 
   font-size: 9px;
   font-weight: 800;
@@ -617,9 +639,9 @@
 
   padding: 16px 0;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(245, 197, 66, 0.4);
 
-  color: rgba(255, 255, 255, 0.58);
+  color: #ffffff;
 
   font-size: 12px;
   font-weight: 600;
@@ -639,8 +661,9 @@
 }
 
 .sidebarInfo a span {
-  color: #e5b51b;
-  font-size: 15px;
+  color: #ffd166;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 /* =========================

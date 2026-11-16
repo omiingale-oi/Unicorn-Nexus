@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 import { blogs } from "@/data/blogs";
 
@@ -11,6 +12,43 @@ type BlogPageProps = {
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return blogs.map((blog) => ({ slug: blog.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: BlogPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = blogs.find((item) => item.slug === slug);
+
+  if (!blog) {
+    return { title: "Article Not Found | Unicorn Nexus 360" };
+  }
+
+  const url = `https://www.unicornnexus360.com/knowledge-hub/${blog.slug}`;
+
+  return {
+    title: blog.title,
+    description: blog.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt,
+      url,
+      siteName: "Unicorn Nexus 360",
+      type: "article",
+      images: [{ url: blog.image, alt: blog.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt,
+      images: [blog.image],
+    },
+  };
+}
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { slug } = await params;
@@ -94,9 +132,32 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 discoverable and digitally stronger.
               </div>
 
-              {blog.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {blog.sections
+                ? blog.sections.map((section) => (
+                    <section key={section.heading}>
+                      <h2>{section.heading}</h2>
+                      {section.paragraphs?.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                      {section.orderedList && (
+                        <ol>
+                          {section.orderedList.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ol>
+                      )}
+                      {section.bulletList && (
+                        <ul>
+                          {section.bulletList.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </section>
+                  ))
+                : blog.content.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
 
               <div className={styles.articleDivider} />
 
